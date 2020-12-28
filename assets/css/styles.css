@@ -307,7 +307,7 @@ img{
   border-radius: .5rem;
 }
 
-/* ===== WORK =====*/
+/* ===== Projects =====*/
 .work__container{
   row-gap: 2rem;
 }
@@ -322,6 +322,20 @@ img{
 }
 .work__img img:hover{
   transform: scale(1.1);
+}
+
+.resume__container{
+  row-gap: 2rem;
+  text-align: center;
+}
+
+.project__button{
+  display: block;
+  border: none;
+  outline: none;
+  font-size: var(--normal-font-size);
+  cursor: pointer;
+  margin-left: auto;
 }
 
 /* ===== CONTACT =====*/

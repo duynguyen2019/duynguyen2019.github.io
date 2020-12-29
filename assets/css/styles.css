@@ -58,6 +58,9 @@ body{
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   
 }
 h1,h2,p{

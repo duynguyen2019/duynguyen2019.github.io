@@ -202,7 +202,7 @@ img{
   align-self: center;
 }
 .home__title{
-  font-size: large;
+  font-size: x-large;
   margin-bottom: var(--mb-5);
 }
 .home__title-color{
@@ -227,7 +227,7 @@ img{
   right: 0;
   bottom: 0;
   width: 295px;
-  background-image: url('assets/img/moon1.jpg') !important;
+  
 }
 
 /*BUTTONS*/

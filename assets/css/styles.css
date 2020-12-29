@@ -58,9 +58,6 @@ body{
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   
 }
 h1,h2,p{
@@ -128,7 +125,7 @@ img{
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #fff;
+  background-color:black;
   box-shadow: 0 1px 4px rgba(146,161,176,.15);
 }
 
@@ -380,8 +377,8 @@ img{
 
 /* ===== FOOTER =====*/
 .footer{
-  background-color: var(--second-color);
-  color: rgb(0, 0, 0);
+  background-color: black;
+  color: rgb(255, 255, 255);
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;

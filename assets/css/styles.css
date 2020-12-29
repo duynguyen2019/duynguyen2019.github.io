@@ -53,12 +53,11 @@ html{
   scroll-behavior: smooth;
 }
 body{
-  background-image: url('./img/moon1.jpg') !important; 
+  background-image: url('./img/moon1.jpg') ; 
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
-  background-color:powderblue;
   
 }
 h1,h2,p{

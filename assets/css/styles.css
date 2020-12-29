@@ -307,8 +307,11 @@ img{
 .skills__ux{
   width: 90%;
 }
-.skills__img{
-  border-radius: .5rem;
+.skill__skillpic1{
+  justify-self: center;
+}
+.skill__skillpic2{
+  justify-self: center;
 }
 
 /* ===== Projects =====*/

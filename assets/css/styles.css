@@ -322,10 +322,10 @@ img{
   opacity: 0.5;
 } */
 
-.skills_imageSkill img{
+.skills__imageSkill img{
   opacity: 0.5;
 }
-.skills_imageSkill img:hover{
+.skills__imageSkill img:hover{
   opacity: 1;
 }
 

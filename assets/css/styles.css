@@ -320,6 +320,12 @@ img{
 .skill__skillpic1{
   justify-self: center;
 }
+#list::after {
+  transition: opacity 1s ease;
+}
+#list:hover::after {
+  opacity: 0.5;
+}
 .skill__skillpic2{
   justify-self: center;
 }

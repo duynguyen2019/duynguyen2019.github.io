@@ -317,14 +317,19 @@ img{
 .skills__ux{
   width: 90%;
 }
-.skills__skillpic1 img{
+/* .skills__skillpic1 img{
   justify-self: center;
   opacity: 0.5;
+} */
+
+.skills_imageSkill img{
+  opacity: 0.5;
+}
+.skills_imageSkill img:hover{
+  opacity: 1;
 }
 
-.imageSkill img{
-  opacity: .1;
-}
+
 
 /* .skills__skillpic2 img:hover{
   opacity: 1;

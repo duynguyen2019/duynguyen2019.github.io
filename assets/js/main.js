@@ -43,19 +43,37 @@ sr.reveal('.home__social-icon',{ interval: 200});
 sr.reveal('.about__img',{}); 
 sr.reveal('.about__subtitle',{delay: 400}); 
 sr.reveal('.about__text',{delay: 400}); 
-
 /*SCROLL SKILLS*/
 sr.reveal('.skills__subtitle',{}); 
 sr.reveal('.skills__text',{}); 
-sr.reveal('.skills__data',{interval: 200}); 
+sr.reveal('.skills__mathmodel',{interval: 200}); 
+sr.reveal('.skills__r',{interval: 200}); 
+sr.reveal('.skills__python',{interval: 200}); 
+sr.reveal('.skills__matlab',{interval: 200}); 
+sr.reveal('.skills__datamanipulation',{interval: 200}); 
+sr.reveal('.skills__dataanalysis',{interval: 200}); 
 sr.reveal('.skills__img',{delay: 600});
+sr.reveal('.skills__imageSkill',{delay: 400}); 
+
 
 /*SCROLL WORK*/
+
+sr.reveal('.projects__notes',{interval: 200}); 
 sr.reveal('.work__img',{interval: 200}); 
 
 /*SCROLL CONTACT*/
 sr.reveal('.contact__input',{interval: 200}); 
 
+/*Testing Change Image*/
 
-
+// $(document).ready(function(){
+//     $("#r").hover(function() {
+//     $( '.skills__subimageSkill' ).attr("src","assets/img/moon1.jpg");
+//     }, function() {
+//     })});
+// $('skills__r').hover(function(){
+//     $('skills_preview').addClass('Model');
+// },function(){
+//     $('skills_preview').removeClass('Model');
+// });
 

@@ -84,24 +84,28 @@
                 <h2 class="section-title">Skills</h2>
 
                 <div class="skills__container bd-grid">          
-                    <div class ="skills__imageSkill">              
+                    <!-- <div class ="skills__imageSkill">              
                         <img src="assets/img/moon6.jpg" alt="" >
+                    </div> -->
+                    <div class="skills__images">
+                        <img id="myImage" width="500" height="490" src ="assets/img/moon6.jpg">
                     </div>
                     <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <div class="skills__data">
+                        <h2 class="skills__subtitle">Professional Skills</h2>
+                        <div class="skills__r" onmouseover="changeImage(model)" >
                             <div class="skills__names">
                                 <i class='material-icons" style="font-size:48px;color:red'></i>
                                 <span class="skills__name">Mathematical Modelling</span>
                             </div>
-                            <!-- <div class="skills__bar skills__mathmodel">
+                            <!-- <div class="skills__bar skills__html">
+
                             </div>
                             <div>
                                 <span class="skills__percentage">90%</span>
                             </div> -->
                         </div>
 
-                        <div class="skills__data">
+                        <div class="skills__r"onmouseover="changeImage(r)">
                             <div class="skills__names">
                                 <i class='material-icons" style="font-size:48px;color:red'></i>
                                 <span class="skills__name">R</span>
@@ -113,7 +117,7 @@
                                 <span class="skills__percentage">90%</span>
                             </div> -->
                         </div>
-                        <div class="skills__data">
+                        <div class="skills__python" onmouseover="changeImage(python)">
                             <div class="skills__names">
                                 <i class='material-icons" style="font-size:48px;color:red'></i>
                                 <span class="skills__name">Python</span>
@@ -125,7 +129,7 @@
                                 <span class="skills__percentage">90%</span>
                             </div> -->
                         </div>
-                        <div class="skills__data">
+                        <div class="skills__matlab" onmouseover="changeImage(matlab)">
                             <div class="skills__names">
                                 <i class='material-icons" style="font-size:48px;color:red' ></i>
                                 <span class="skills__name">MATLAB</span>
@@ -137,7 +141,7 @@
                                 <span class="skills__percentage">90%</span>
                             </div> -->
                         </div>
-                        <div class="skills__data">
+                        <div class="skills__datamanipulation" onmouseover="changeImage(datamanipulation)">
                             <div class="skills__names">
                                 <i class='material-icons" style="font-size:48px;color:red' ></i>
                                 <span class="skills__name">Data Manipulation</span>
@@ -149,28 +153,27 @@
                                 <span class="skills__percentage">90%</span>
                             </div> -->
                         </div>
-                        <div class="skills__data">
+                        <div class="skills__dataanalysis"onmouseover="changeImage(dataanalysis)">
                             <div class="skills__names">
                                 <i class='material-icons" style="font-size:48px;color:red' ></i>
                                 <span class="skills__name">Data Analysis</span>
                             </div>
-                            <!-- <div class="skills__bar skills__js">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">90%</span>
-                            </div> -->
                         </div>
-
+                        <div class="skills__javascript"onmouseover="changeImage(javascript)">
+                            <div class="skills__names">
+                                <i class='material-icons" style="font-size:48px;color:red' ></i>
+                                <span class="skills__name">HTML, CSS, JavaScript</span>
+                            </div>
+                        </div>
                 </div>
             </section>
 
             <!--===== Projects =====-->
-            <section class="project section" id="projects">
+            <section class="projects" id="projects">
                 <h2 class="section-title">Projects</h2>
 
                 <div class="projects__container bd-grid">          
-                    <div>
+                    <div class= "projects__notes">
                         <h2 class="projects__subtitle">LUNAR LANDING 2024 (NASA/JPL)</h2>
                         <p class="projects__text">NASA is planning to put the first woman and next man on the Moon by 2024 under the
                             Artemis program. To sustainably explore the Moon, the agency would need to build its habitable bases at the
@@ -221,8 +224,21 @@
 
         <!--===== SCROLL REVEAL =====-->
         <script src="https://unpkg.com/scrollreveal"></script>
-
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+        <script>
+            var model = "assets/img/COVID19_CSUF.jpg";
+            var r = "assets/img/r.jpg";
+            var python = "assets/img/python.jpg";
+            var matlab = "assets/img/matlab.jpg";
+            var datamanipulation = "assets/img/datamanipulation.jpg";
+            var dataanalysis = "assets/img/datamanipulation.jpg";
+            var javascript = "assets/img/html.jpg";
+            function changeImage(src){
+                document.getElementById("myImage").src = src;
+            }
+
+        </script>
     </body>
 </html>

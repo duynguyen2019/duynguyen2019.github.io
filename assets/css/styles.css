@@ -317,15 +317,15 @@ img{
 .skills__ux{
   width: 90%;
 }
-.skill__skillpic1{
+.skills__skillpic1 img{
   justify-self: center;
   opacity: 0.5;
 }
 
-.skills__skillpic2{
+.skills__skillpic2 img{
   opacity: 0.5;
 }
-.skills__skillpic2:hover{
+.skills__skillpic2 img:hover{
   opacity: 1;
 }
 

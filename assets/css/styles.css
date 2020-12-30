@@ -322,12 +322,12 @@ img{
   opacity: 0.5;
 }
 
-.skills__skillpic2 img{
-  opacity: 0.5;
+div:hover ~ div#imageSkill {
+  opacity: .2;
 }
-.skills__skillpic2 img:hover{
+/* .skills__skillpic2 img:hover{
   opacity: 1;
-}
+} */
 
 /* ===== Projects =====*/
 .work__container{

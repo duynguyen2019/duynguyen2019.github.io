@@ -260,7 +260,14 @@ img{
   width: 200px;
   border-radius: .5rem;
 }
-
+.about__img img{
+  opacity: 0.5
+    
+}
+.about__img img:hover{
+  opacity: 1
+    
+}
 /* ===== SKILLS =====*/
 .skills__container{
   row-gap: 2rem;

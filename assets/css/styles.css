@@ -322,7 +322,7 @@ img{
   opacity: 0.5;
 }
 
-div:hover ~ div#imageSkill {
+.imageSkill{
   opacity: .2;
 }
 /* .skills__skillpic2 img:hover{

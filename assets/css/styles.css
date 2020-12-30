@@ -319,14 +319,13 @@ img{
 }
 .skill__skillpic1{
   justify-self: center;
-}
-
-.skill__skillpic2{
-  justify-self: center;
   opacity: 0.5;
 }
-.skill__skillpic2:hover{
-  justify-self: center;
+
+.skills__skillpic2{
+  opacity: 0.5;
+}
+.skills__skillpic2:hover{
   opacity: 1;
 }
 

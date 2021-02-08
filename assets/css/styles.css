@@ -499,6 +499,12 @@ img{
 } */
 
 /* ===== Projects =====*/
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block
+}
+
 .work__container{
   row-gap: 2rem;
 }

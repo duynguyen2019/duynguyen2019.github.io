@@ -480,10 +480,10 @@ img{
 } */
 
 .skills__images img{
-  opacity: 0.5;
+  opacity: 1;
 }
 .skills__images img:hover{
-  opacity: 0.9 ;
+  opacity: 1 ;
 }
 
 .skills__img{

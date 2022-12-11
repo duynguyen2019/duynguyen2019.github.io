@@ -1,260 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="assets/css/styles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-        <title>Mathemagician</title>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Mathemagician</title>
+</head>
+
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">Duy Nguyen</a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--===== HOME =====-->
+        <section class="home bd-grid" id="home">
+            <div class="home__data">
+                <h1 class="home__title">Hello,<br>I am <span class="home__title-color">Duy Nguyen</span><br> Applied
+                    Mathematician &
+                    <br>Data Scientist
+                </h1>
+                <div style="text-align:center"> <a href="#contact" class="button">Contact</a></div>
+            </div>
+
+            <div class="home__social">
+                <a href="https://www.linkedin.com/in/duy-nguyen-8155b3b4/" class="home__social-icon"><i
+                        class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/duynguyen2019" class="home__social-icon"><i class='bx bxl-github'></i></a>
+            </div>
+        </section>
+
+        <!--===== ABOUT =====-->
+        <section class="about section " id="about">
+            <h2 class="section-title">About</h2>
+
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="assets/img/Per_Pic.jpg" alt="">
+                </div>
+
                 <div>
-                    <a href="#" class="nav__logo">Duy Nguyen</a>
+                    <h2 class="about__subtitle">I am Duy Nguyen</h2>
+                    <p class="about__text">I obtained a Master degree in Computational and Applied Math from CSU, Fullerton in 2021. 
+                        I currently hold a Secret Clearance due to a civilian position in the Navy. Regarding my work experience, 
+                        I am a full-stack programmer with 4 years of experience in developing web applications, database management and data analysis. 
+                        I am proficient in Python, SQL, R, MATLAB and familiar with HTML, CSS, JavaScript and AWS services.
+                        </p>
                 </div>
+            </div>
+        </section>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    </ul>
-                </div>
+        <!--===== SKILLS =====-->
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
-
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hello,<br>I am <span class="home__title-color">Duy Nguyen</span><br> Applied Mathematician &
-                                                                                                            <br >Data Scientist
-                    </h1>
-                   <div style="text-align:center">  <a href="#contact" class="button">Contact</a></div>
-                </div>
-
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/duy-nguyen-8155b3b4/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/duynguyen2019" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                </div>
-            </section>
-
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
-
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/Per_Pic.jpg" alt="" >
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I am Duy Nguyen</h2>
-                        <p class="about__text">I graduated with Academic Honors from the Master program in Applied Mathematics at California
-                                               State University, Fullerton. My career goal is developing solutions to computationally challenging problems
-                                               through programming and mathematical modelling. I am interested in data science, aerospace
-                                               engineering, especially in building models to improve defense systems and spacecraft.
-                                               I have developed the Terrain Coverage Analysis Tool for NASA/JPL. This tool is used to
-                                               assess the illumination by the Sun and the communication coverage on the lunar's surface
-                                               by ground stations on the Earth and lunar relay satellites.</p>           
-                    </div>                                   
-                </div>
-            </section>
-
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
-
-                <div class="skills__container bd-grid">          
-                    <!-- <div class ="skills__imageSkill">              
+            <div class="skills__container bd-grid">
+                <!-- <div class ="skills__imageSkill">              
                         <img src="assets/img/moon6.jpg" alt="" >
                     </div> -->
-                    <div class="skills__images">
-                        <img id="myImage" width="500" height="500" src ="assets/img/moon6.jpg">
-                    </div>
-                    <div>
-                        <h2 class="skills__subtitle">Professional Skills</h2>
-                        <div class="skills__r" onmouseover="changeImage(model)" >
-                            <div class="skills__names">
-                                <i class='material-icons" style="font-size:48px;color:red'></i>
-                                <span class="skills__name">Mathematical Modelling</span>
-                            </div>
-                            <!-- <div class="skills__bar skills__html">
-                            </div>
-                            <div>
-                                <span class="skills__percentage">90%</span>
-                            </div> -->
-                        </div>
-
-                        <div class="skills__r"onmouseover="changeImage(r)">
-                            <div class="skills__names">
-                                <i class='material-icons" style="font-size:48px;color:red'></i>
-                                <span class="skills__name">R</span>
-                            </div>
-                            <!-- <div class="skills__bar skills__html">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">90%</span>
-                            </div> -->
-                        </div>
-                        <div class="skills__python" onmouseover="changeImage(python)">
-                            <div class="skills__names">
-                                <i class='material-icons" style="font-size:48px;color:red'></i>
-                                <span class="skills__name">Python</span>
-                            </div>
-                            <!-- <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">90%</span>
-                            </div> -->
-                        </div>
-                        <div class="skills__matlab" onmouseover="changeImage(matlab)">
-                            <div class="skills__names">
-                                <i class='material-icons" style="font-size:48px;color:red' ></i>
-                                <span class="skills__name">MATLAB</span>
-                            </div>
-                            <!-- <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">90%</span>
-                            </div> -->
-                        </div>
-                        <div class="skills__datamanipulation" onmouseover="changeImage(datamanipulation)">
-                            <div class="skills__names">
-                                <i class='material-icons" style="font-size:48px;color:red' ></i>
-                                <span class="skills__name">Data Manipulation</span>
-                            </div>
-                            <!-- <div class="skills__bar skills__js">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">90%</span>
-                            </div> -->
-                        </div>
-                        <div class="skills__dataanalysis"onmouseover="changeImage(dataanalysis)">
-                            <div class="skills__names">
-                                <i class='material-icons" style="font-size:48px;color:red' ></i>
-                                <span class="skills__name">Data Analysis</span>
-                            </div>
-                        </div>
-                        <div class="skills__javascript"onmouseover="changeImage(javascript)">
-                            <div class="skills__names">
-                                <i class='material-icons" style="font-size:48px;color:red' ></i>
-                                <span class="skills__name">HTML, CSS, JavaScript</span>
-                            </div>
-                        </div>
+                <div class="skills__images">
+                    <img id="myImage" width="500" height="500" src="assets/img/moon6.jpg">
                 </div>
-            </section>
+                <div>
+                    <h2 class="skills__subtitle">Professional Skills</h2>
+                    <div class="skills__r" onmouseover="changeImage(model)">
+                        <div class="skills__names">
+                            <i class='material-icons" style="font-size:48px;color:red'></i>
+                            <span class="skills__name">Mathematical Modelling</span>
+                        </div>
+                        <!-- <div class="skills__bar skills__html">
+                            </div>
+                            <div>
+                                <span class="skills__percentage">90%</span>
+                            </div> -->
+                    </div>
 
-            <!--===== Projects =====-->
-            <section class="projects" id="projects">
-                <h2 class="section-title">Projects</h2>
+                    <div class="skills__r" onmouseover="changeImage(r)">
+                        <div class="skills__names">
+                            <i class='material-icons" style="font-size:48px;color:red'></i>
+                            <span class="skills__name">R</span>
+                        </div>
+                        <!-- <div class="skills__bar skills__html">
 
-                <div class="projects__container bd-grid">          
-                    <div class= "projects__notes">
-                        <h2 class="projects__subtitle" >LUNAR LANDING 2024 (NASA/JPL) </h2>
-                        <p class="projects__text">NASA is planning to put the first woman and next man on the Moon by 2024 under the
-                            Artemis program. To sustainably explore the Moon, the agency would need to build its habitable bases at the
-                            lunar south pole (LSP), where past orbiters’ observations indicated the presence of water ice in permanently dark
-                            craters. Unlike Apollo landing sites, which clustered mostly near the equator, no human has ever set foot on LSP.
-                            As a result, it is crucial to develop a tool to assess the illumination by the Sun and the communication coverage
-                            by Earth ground stations and lunar relay satellites. I have developed the Terrain Coverage Analysis Tool for the following purposes: </p>
-                            <ol>
-                                <li>Modeling and computing terrain</li>
-                                <li>Regional dynamic simulation</li>
-                                <li>Terrain visualization from a lunar asset</li>
-                                <li>Path Transverse Optimization</li>
-                              </ol> 
-                            I am actively working on this project to optimize the run time of the code and add new features to the tool such as the ability
-                            to see the view along the tranverse path, analysis of the satellite's coverage, etc. Video's demo is shown below 
-					</div>
-					<!-- <div>              
+                            </div>
+                            <div>
+                                <span class="skills__percentage">90%</span>
+                            </div> -->
+                    </div>
+                    <div class="skills__python" onmouseover="changeImage(python)">
+                        <div class="skills__names">
+                            <i class='material-icons" style="font-size:48px;color:red'></i>
+                            <span class="skills__name">Python</span>
+                        </div>
+                        <!-- <div class="skills__bar skills__css">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">90%</span>
+                            </div> -->
+                    </div>
+                    <div class="skills__matlab" onmouseover="changeImage(matlab)">
+                        <div class="skills__names">
+                            <i class='material-icons" style="font-size:48px;color:red'></i>
+                            <span class="skills__name">MATLAB</span>
+                        </div>
+                        <!-- <div class="skills__bar skills__js">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">90%</span>
+                            </div> -->
+                    </div>
+                    <div class="skills__datamanipulation" onmouseover="changeImage(datamanipulation)">
+                        <div class="skills__names">
+                            <i class='material-icons" style="font-size:48px;color:red'></i>
+                            <span class="skills__name">Data Manipulation</span>
+                        </div>
+                        <!-- <div class="skills__bar skills__js">
+
+                            </div>
+                            <div>
+                                <span class="skills__percentage">90%</span>
+                            </div> -->
+                    </div>
+                    <div class="skills__dataanalysis" onmouseover="changeImage(dataanalysis)">
+                        <div class="skills__names">
+                            <i class='material-icons" style="font-size:48px;color:red'></i>
+                            <span class="skills__name">Data Analysis</span>
+                        </div>
+                    </div>
+                    <div class="skills__javascript" onmouseover="changeImage(javascript)">
+                        <div class="skills__names">
+                            <i class='material-icons" style="font-size:48px;color:red'></i>
+                            <span class="skills__name">HTML, CSS, JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!--===== Projects =====-->
+        <section class="projects" id="projects">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="projects__container bd-grid">
+                <div class="projects__notes">
+                    <h2 class="projects__subtitle">LUNAR LANDING 2024 (NASA/JPL) </h2>
+                    <p class="projects__text">NASA is planning to put the first woman and next man on the Moon by 2024
+                        under the
+                        Artemis program. To sustainably explore the Moon, the agency would need to build its habitable
+                        bases at the
+                        lunar south pole (LSP), where past orbiters’ observations indicated the presence of water ice in
+                        permanently dark
+                        craters. Unlike Apollo landing sites, which clustered mostly near the equator, no human has ever
+                        set foot on LSP.
+                        As a result, it is crucial to develop a tool to assess the illumination by the Sun and the
+                        communication coverage
+                        by Earth ground stations and lunar relay satellites. I have developed the Terrain Coverage
+                        Analysis Tool for the following purposes: </p>
+                    <ol>
+                        <li>Modeling and computing terrain</li>
+                        <li>Regional dynamic simulation</li>
+                        <li>Terrain visualization from a lunar asset</li>
+                        <li>Path Transverse Optimization</li>
+                    </ol>
+                    I am actively working on this project to optimize the run time of the code and add new features to
+                    the tool such as the ability
+                    to see the view along the tranverse path, analysis of the satellite's coverage, etc. Video's demo is
+                    shown below
+                </div>
+                <!-- <div>              
                         <img src="assets/img/moon1.jpg" alt="" class="skills__img">
                     </div> -->
 
 
-                    <video width="500" height="440" class='center' style="margin-top: 50px"  controls>
-                        <source src="assets/img/2DVIEW.mp4 "type="video/mp4">
-                        Your browser does not support the video tag.
-                     </video>
-                    <div style="margin-top: 50px" >The demo shows Sun's illumination (red), Earth-visible (blue) 
-                                and the intersection regions (pink) on the Lunar's South Pole
-                                (1600 square kilometer, centered at SP) in November 2024.
-                               The number on each object represents its angular height measured from the horizon.
-                    </div>
-                    <div class= "projects__notes">
-                        <h2 class="projects__subtitle" style="margin-top: 50px">COVID-19 Vaccination Modelling</h2>
-                        <p class="projects__text">In this project, I modified Susceptible-Infected-Recovered (SIR) mathematical model
-                             used on the SARS to get the Susceptible-Vaccinated-Infected-Recovered (SVIR) model. 
-                             Then I approximated the parameters to fit the Korea COVID-19 data to implement the SVIR model.
-                              I investigated the model to determine the proportion of the population that is needed to be vaccinated in order to control the spread of the COVID-19 outbreak. 
-                              Before doing modelling and analysis, I expected that the number of infected cases to reduce as the percentage of vaccination per day increased. 
-                              The results that I obtained from implementing my model are very similar to what I predicted. 
-                              Increasing the vaccination rate per day from 1% to 7% has a significant impact on the total infected cases.
-					</div>
-					<div>              
-                        <img src="assets/img/Vec3vsVec7.jpg" alt="" class="skills__img">
-                    </div>
-					
-            </section>
-             <!--===== RESUME =====-->
-             <section class="resume section" id="resume">
-                <h2 class="section-title">Resume</h2>
-				
-                <div class="resume__container bd-grid">
-					<div class="home__data">
-						<a href="assets\downloads\Resume_DN.pdf" class="button" download="Duy_Nguyen_Resume.pdf" data-sr-id="3" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">Download</a>
-					</div>
-				</div>
-                    
-            </section>
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
-
-                <div class="contact__container bd-grid">
-                    duynguyen1993@csu.fullerton.edu
+                <video width="500" height="440" class='center' style="margin-top: 50px" controls>
+                    <source src="assets/img/2DVIEW.mp4 " type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div style="margin-top: 50px">The demo shows Sun's illumination (red), Earth-visible (blue)
+                    and the intersection regions (pink) on the Lunar's South Pole
+                    (1600 square kilometer, centered at SP) in November 2024.
+                    The number on each object represents its angular height measured from the horizon.
                 </div>
-            </section>
-        </main>
+                <div class="projects__notes">
+                    <h2 class="projects__subtitle" style="margin-top: 50px">COVID-19 Vaccination Modelling</h2>
+                    <p class="projects__text">In this project, I modified Susceptible-Infected-Recovered (SIR)
+                        mathematical model
+                        used on the SARS to get the Susceptible-Vaccinated-Infected-Recovered (SVIR) model.
+                        Then I approximated the parameters to fit the Korea COVID-19 data to implement the SVIR model.
+                        I investigated the model to determine the proportion of the population that is needed to be
+                        vaccinated in order to control the spread of the COVID-19 outbreak.
+                        Before doing modelling and analysis, I expected that the number of infected cases to reduce as
+                        the percentage of vaccination per day increased.
+                        The results that I obtained from implementing my model are very similar to what I predicted.
+                        Increasing the vaccination rate per day from 1% to 7% has a significant impact on the total
+                        infected cases.
+                </div>
+                <div>
+                    <img src="assets/img/Vec3vsVec7.jpg" alt="" class="skills__img">
+                </div>
 
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Duy Nguyen</p>
-            <p>&#169; 2021 copyright all right reserved</p>
-        </footer>
+        </section>
+        <!--===== RESUME =====-->
+        <section class="resume section" id="resume">
+            <h2 class="section-title">Resume</h2>
+
+            <div class="resume__container bd-grid">
+                <div class="home__data">
+                    <a href="assets\downloads\Resume_DN.pdf" class="button" download="Duy_Nguyen_Resume.pdf"
+                        data-sr-id="3"
+                        style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;">Download</a>
+                </div>
+            </div>
+
+        </section>
+        <!--===== CONTACT =====-->
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact__container bd-grid">
+                duynguyen1993@csu.fullerton.edu
+            </div>
+        </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <p class="footer__title">Duy Nguyen</p>
+        <p>&#169; 2021 copyright all right reserved</p>
+    </footer>
 
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-        <script>
-            var model = "assets/img/COVID19_CSUF.jpg";
-            var r = "assets/img/r.jpg";
-            var python = "assets/img/python.JPG";
-            var matlab = "assets/img/matlab.jpg";
-            var datamanipulation = "assets/img/datamanipulation.JPG";
-            var dataanalysis = "assets/img/datamanipulation.JPG";
-            var javascript = "assets/img/html.JPG";
-            function changeImage(src){
-                document.getElementById("myImage").src = src;
-            }
-        </script>
-    </body>
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+    <script>
+        var model = "assets/img/COVID19_CSUF.jpg";
+        var r = "assets/img/r.jpg";
+        var python = "assets/img/python.JPG";
+        var matlab = "assets/img/matlab.jpg";
+        var datamanipulation = "assets/img/datamanipulation.JPG";
+        var dataanalysis = "assets/img/datamanipulation.JPG";
+        var javascript = "assets/img/html.JPG";
+        function changeImage(src) {
+            document.getElementById("myImage").src = src;
+        }
+    </script>
+</body>
+
 </html>

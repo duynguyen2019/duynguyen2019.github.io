@@ -1,18 +1,19 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
 /*===== VARIABLES CSS =====*/
 :root{
   --header-height: 3rem;
   --font-semi: 600;
 }
 
-/*===== Colores =====*/
+/*===== Colors =====*/
 :root{
   --first-color: #4070F4;
   --second-color: #fdfdfd;
 }
 
-/*===== Fuente y tipografia =====*/
+/*===== Font and Typography =====*/
 :root{
   --body-font: 'Poppins', sans-serif;
   --big-font-size: 2rem;
@@ -27,7 +28,7 @@
   }
 }
 
-/*===== Margenes =====*/
+/*===== Margins =====*/
 :root{
   --mb-1: 0.5rem;
   --mb-2: 1rem;
@@ -58,7 +59,6 @@ body{
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
-  
 }
 h1,h2{
   margin: 0;
@@ -91,17 +91,6 @@ img{
   margin-bottom: var(--mb-4);
   text-align: center;
 }
-/* .section-title::after{
-  position: absolute;
-  content: "";
-  width: 64px;
-  height: 0.18rem;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 2rem;
-  background-color: var(--first-color);
-} */
 .section-title {
   font-size: 40px;
   color: #fff;
@@ -120,20 +109,12 @@ img{
   }
 }
 
-
 .section{
   padding-top: 3rem;
   padding-bottom: 2rem;
 }
 
 /*===== LAYOUT =====*/
-/* .bg{
-  background-image: url("C:\Projects\duynguyen2019.github.io\assets\img\moon1.jpg") ;
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
 .bd-grid{
   max-width: 1024px;
   display: grid;
@@ -179,19 +160,26 @@ img{
 .nav__link{
   position: relative;
   color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-.nav__link:hover{
-  position: relative;
+
+.nav__link:hover {
+  color: #00aaff; /* Change the text color to a lighter blue when hovering */
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.8), 0 0 10px rgba(0, 170, 255, 0.6); /* Glowing effect */
 }
-.nav__link:hover::after{
+
+.nav__link:hover::before {
+  content: '';
   position: absolute;
-  content: "";
-  width: 100%;
-  height: 0.18rem;
   left: 0;
-  top: 2rem;
-  background-color: var(--first-color);
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: #00aaff;
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.8), 0 0 10px rgba(0, 170, 255, 0.6); /* Glowing effect */
 }
+
 .nav__logo{
   color: var(--second-color);
 }
@@ -236,14 +224,12 @@ img{
   /* display: flex; */
   flex-direction: column;
   text-align: center;
-  
 }
 .home__social-icon{
   width: max-content;
   margin-bottom: var(--mb-2);
   font-size: 3rem;
   color: var(--second-color);
-  
 }
 .home__social-icon:hover{
   color: var(--first-color);
@@ -253,7 +239,6 @@ img{
   right: 0;
   bottom: 0;
   width: 295px;
-  
 }
 
 /*BUTTONS*/
@@ -288,12 +273,10 @@ img{
   border-radius: .5rem;
 }
 .about__img img{
-  opacity: 0.5
-    
+  opacity: 0.5;
 }
 .about__img img:hover{
-  opacity: 1
-    
+  opacity: 1;
 }
 
 /* ===== SKILLS =====*/
@@ -438,7 +421,7 @@ img{
   background-color: rgb(128, 119, 117);
 }
 .skills__javascript:hover{
-  box-shadow: inset 0 0 10px  blue;
+  box-shadow: inset 0 0 10px  rgb(0, 106, 255);
 }
 .skills__icon{
   font-size: 2rem;
@@ -474,11 +457,6 @@ img{
 .skills__ux{
   width: 90%;
 }
-/* .skills__skillpic1 img{
-  justify-self: center;
-  opacity: 0.5;
-} */
-
 .skills__images img{
   opacity: 1;
 }
@@ -491,12 +469,7 @@ img{
   margin-left: auto;
   margin-right: auto;
   width: 80%;
-
 }
-
-/* .skills__skillpic2 img:hover{
-  opacity: 1;
-} */
 
 /* ===== Projects =====*/
 .center {
@@ -555,7 +528,6 @@ img{
   margin-left: auto;
 }
 
-
 /* ===== FOOTER =====*/
 .footer{
   background-color: black;
@@ -574,7 +546,7 @@ img{
 .footer__icon{
   font-size: 1.5rem;
   color: #fff;
-  margin: 0 var(--mb-2)
+  margin: 0 var(--mb-2);
 }
 
 /* ===== MEDIA QUERIES=====*/
@@ -589,10 +561,6 @@ img{
   .section-title{
     margin-bottom: var(--mb-6);
   }
-  .section-title::after{
-    width: 80px;
-    top: 3rem;
-  }
 
   .nav{
     height: calc(var(--header-height) + 1rem);
@@ -600,21 +568,7 @@ img{
   .nav__list{
     display: flex;
     padding-top: 0;
-    -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
   }
-  .nav__list:hover {
-  color: rgb(216, 213, 213);
-  text-shadow:0px 0px 30px #fdec6e;
-  -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
-  }
-
-  
   
   .nav__item{
     margin-left: var(--mb-6);

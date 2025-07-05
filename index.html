@@ -14,81 +14,86 @@
 </head>
 
 <body>
-    <!--===== HEADER =====-->
-    <header class="l-header">
-        <nav class="nav bd-grid">
-            <div>
-                <a href="#" class="nav__logo">Duy Nguyen</a>
-            </div>
-
-            <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#publications" class="nav__link">Publications</a></li>
-                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
-            </div>
-        </nav>
-    </header>
-
     <main class="l-main">
-        <!--===== HOME =====-->
-        <section class="home bd-grid" id="home">
-            <div class="home__data">
+        <!--===== HOME + ABOUT in 1x2 grid =====-->
+        <section class="home-about-grid bd-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; align-items: flex-start; text-align: left; width: 100vw; max-width: 100vw; margin-left: calc(-50vw + 50%); box-sizing: border-box;">
+            <div>
                 <h1 class="home__title">Hello,<br>I am <span class="home__title-color">Duy Nguyen</span><br> Programmer
                 </h1>
+                <div class="about__img" style="text-align:center; margin-bottom:1rem;">
+                    <img src="assets/img/Per_Pic.jpg" alt="" style="max-width:200px; border-radius:0.5rem;">
+                </div>
                 <div style="text-align:center">
-                    <a href="assets\downloads\Professional.pdf" class="button" download="Duy_Nguyen_Resume.pdf"
+                    <a href="assets/downloads/Professional.pdf" class="button" download="Duy_Nguyen_Resume.pdf"
                     data-sr-id="3">Download Resume
                     </a> 
                 </div>
-                <div style="text-align:center;background-color: white;" data-iframe-width="200" data-iframe-height="270"
-                data-share-badge-id="ae7ce3bc-8d0a-4be8-87d3-8d0941cb7064"
-                data-share-badge-host="https://www.credly.com">
+                <div class="home__social" style="text-align:center; margin-top: 1rem;">
+                    <a href="https://www.linkedin.com/in/duy-nguyen-8155b3b4/" class="home__social-icon" target="_blank" title="LinkedIn"><i
+                            class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/duynguyen2019" class="home__social-icon" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                    <a href="mailto:duynguyenms2020@gmail.com" class="home__social-icon" title="Email"><i class='bx bx-envelope'></i></a>
                 </div>
-                
             </div>
-
-            <div class="home__social">
-                <a href="https://www.linkedin.com/in/duy-nguyen-8155b3b4/" class="home__social-icon"><i
-                        class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/duynguyen2019" class="home__social-icon"><i class='bx bxl-github'></i></a>
+            <div>
+                <h2 class="section-title">Education and Certificate</h2>
+                <ul class="about__text" style="text-align:left;">
+                    <li>⭐ Master's Degree in Software Engineering (2025)</li>
+                    <li>⭐ <a href="https://www.credly.com/badges/ae7ce3bc-8d0a-4be8-87d3-8d0941cb7064/public_url" target="_blank" rel="noopener noreferrer" style="color:#0074d9;">AWS Certified Developer</a> (2024)</li>
+                    <li>⭐ Master's Degree in Applied Mathematics (2021)</li>
+                    <!-- <li>⭐ 5+ years professional experience as a full-stack programmer (2020–2025)</li> -->
+                </ul>
+                <div style="margin-top:2rem;">
+                    <h2 class="section-title">Skills</h2>
+                    <ul class="about__text" style="text-align:left;">
+                        <li>⭐ Python (5+ years)</li>
+                        <li>⭐ R (5+ years)</li>
+                        <li>⭐ MATLAB (5+ years)</li>
+                        <li>⭐ SQL (5+ years)</li>
+                        <li>⭐ Full stack web development (5+ years)</li>
+                        <li>⭐ Data Analysis &amp; Visualization (5+ years)</li>
+                        <li>⭐ Machine Learning &amp; AI (5+ years)</li>
+                        <li>⭐ AWS (5+ years)</li>
+                        <li>⭐ Git, Linux (5+ years)</li>
+                    </ul>
+                </div>
             </div>
-        </section>
+            <div>
+                <h2 class="section-title">Work Experience</h2>
+                <ul class="about__text" style="text-align:left;">
+                    <li>⭐ Programmer<br><span style="font-size:0.95em; color:#aaa;">2020–2025, [Company/Institution]</span></li>
+                    <li>⭐ Mathematician<br><span style="font-size:0.95em; color:#aaa;">2018–2020, [Company/Institution]</span></li>
+                    <li>⭐ Part Time Lecturer<br><span style="font-size:0.95em; color:#aaa;">2021–2025, [University/College]</span></li>
+                </ul>
+                <h2 class="section-title" style="margin-top:2rem;">Publications</h2>
+                <ul class="publications__container" style="padding:0; list-style: disc inside; font-size:0.95em; text-align:left;">
+                    <li class="publication__item" style="margin-bottom:1em;">
+                        <span style="font-size:1.05em;">Using HF183 to Estimate Watershed-Wide Annual Loadings of Human Fecal Pollution from Onsite Wastewater Treatment Systems</span><br>
+                        <a href="https://ftp.sccwrp.org/pub/download/DOCUMENTS/JournalArticles/1403_HF183EstimateAnnualLoadingOWTS.pdf" class="button" target="_blank" style="font-size:0.95em; margin-top:0.2em;">Link to document</a>
+                    </li>
+                    <li class="publication__item" style="margin-bottom:1em;">
+                        <span style="font-size:1.05em;">Turf Replacement BMPs to Reduce Dry and Wet Weather Runoff</span><br>
+                        <a href="https://ftp.sccwrp.org/pub/download/DOCUMENTS/TechnicalReports/1391_TurfReplacementBMPs.pdf" class="button" target="_blank" style="font-size:0.95em; margin-top:0.2em;">Link to document</a>
+                    </li>
+                    <li class="publication__item" style="margin-bottom:1em;">
+                        <span style="font-size:1.05em;">Characterizing the Removal of Microplastics by California Wastewater Treatment Plants: Implications for Management Strategies.</span><br>
+                        <a href="https://ftp.sccwrp.org/pub/download/DOCUMENTS/TechnicalReports/1378_MicroplasticsWastewaterPlants.pdf" class="button" target="_blank" style="font-size:0.95em; margin-top:0.2em;">Link to document</a>
+                    </li>
+                    <li class="publication__item" style="margin-bottom:1em;">
+                        <span style="font-size:1.05em;">Multimedia investigations of microplastic concentrations in the Los Angeles and San Gabriel Rivers</span><br>
+                        <a href="https://ftp.sccwrp.org/pub/download/DOCUMENTS/TechnicalReports/1378_MicroplasticsWastewaterPlants.pdf" class="button" target="_blank" style="font-size:0.95em; margin-top:0.2em;">Link to document</a>
+                    </li>
 
-        <!--===== ABOUT =====-->
-        <section class="about section " id="about">
-            <h2 class="section-title">About</h2>
-
-            <div class="about__container bd-grid">
-                <div class="about__img">
-                    <img src="assets/img/Per_Pic.jpg" alt="">
-                </div>
-
-                <div>
-                    <h2 class="about__subtitle"></h2>
-                    <p class="about__text">
-                        Duy completed a Master's degree in Computational and Applied Mathematics from California State University, Fullerton
-                        in 2021, and currently pursuing a second Master's degree in Software Engineering (expected to graduate in May 2025). With four years in the professional field, 
-                        Duy has developed strong skills as a full-stack programmer, 
-                        specializing in web application development, database management, and data analysis. 
-                        He has a strong interest in AI and Machine Learning, backed by relevant coursework and professional experience. 
-                        His programming skills are extensive, including Python, SQL, R, and MATLAB, 
-                        along with HTML, CSS, JavaScript, and AWS services.
-                </div>
+                </ul>
+                <!-- <h2 class="section-title" style="margin-top:1.5rem;">Projects</h2>
+                <div style="font-size:0.95em;">
+                    <a href="#projects" class="button" style="font-size:0.95em;">See my projects</a>
+                </div> -->
             </div>
         </section>
 
         <!--===== SKILLS =====-->
-        <section class="skills section" id="skills">
+        <!-- <section class="skills section" id="skills">
             <h2 class="section-title">Skills</h2>
 
             <div class="skills__container bd-grid">
@@ -141,54 +146,16 @@
                         </div>
                     </div>
                 </div>
-        </section>
-
-        <!--===== PUBLICATIONS =====-->
-        <section class="publications section" id="publications">
-            <h2 class="section-title">Publications</h2>
-
-            <div class="publications__container bd-grid">
-                <div class="publication__item">
-                    <h3 class="publication__title">Using HF183 to Estimate Watershed-Wide Annual Loadings of Human Fecal Pollution from Onsite Wastewater Treatment Systems</h3>
-                    <p class="publication__text">Schiff, K.C., A. Zimmer-Faust, D. Nguyen, J.F. Griffith, J.A. Steele, D.E. McCargar, S. Wallace. 2024. Sustainability 16:9503.</p>
-                    <a href="https://ftp.sccwrp.org/pub/download/DOCUMENTS/JournalArticles/1403_HF183EstimateAnnualLoadingOWTS.pdf" class="button" target="_blank">Link to document</a>
-                </div>
-
-                <div class="publication__item">
-                    <h3 class="publication__title">Turf Replacement BMPs to Reduce Dry and Wet Weather Runoff</h3>
-                    <p class="publication__text">Fassman-Beck, E., E. Tiernan, D. Nguyen, R. Butler. 2024. Technical Report 1391. Southern California Coastal Water Research Project. Costa Mesa, CA.</p>
-                    <a href="https://ftp.sccwrp.org/pub/download/DOCUMENTS/TechnicalReports/1391_TurfReplacementBMPs.pdf" class="button" target="_blank">Link to document</a>
-                </div>
-
-                <div class="publication__item">
-                    <h3 class="publication__title">Characterizing the Removal of Microplastics by California Wastewater Treatment Plants: Implications for Management Strategies.</h3>
-                    <p class="publication__text">Wong, C.S., W. Lao, S. Dial, D. Nguyen, R. Butler, D. Lin. 2024. Technical Report 1378. Southern California Coastal Water Research Project. Costa Mesa, CA.</p>
-                    <a href="https://ftp.sccwrp.org/pub/download/DOCUMENTS/TechnicalReports/1378_MicroplasticsWastewaterPlants.pdf" class="button" target="_blank">Link to document</a>
-                </div>
-
-                <!-- Add more publication items here -->
-            </div>
-        </section>
+        </section> -->
 
         <!--===== Projects =====-->
-        <section class="projects" id="projects">
+        <!--
+        <section class="projects section" id="projects">
             <h2 class="section-title">Projects</h2>
-
             <div class="projects__container bd-grid">
                 <div class="projects__notes">
                     <h2 class="projects__subtitle">LUNAR LANDING 2024 (NASA/JPL) </h2>
-                    <p class="projects__text">NASA is planning to put the first woman and next man on the Moon by 2024
-                        under the
-                        Artemis program. To sustainably explore the Moon, the agency would need to build its habitable
-                        bases at the
-                        lunar south pole (LSP), where past orbiters’ observations indicated the presence of water ice in
-                        permanently dark
-                        craters. Unlike Apollo landing sites, which clustered mostly near the equator, no human has ever
-                        set foot on LSP.
-                        As a result, it is crucial to develop a tool to assess the illumination by the Sun and the
-                        communication coverage
-                        by Earth ground stations and lunar relay satellites. I have developed the Terrain Coverage
-                        Analysis Tool for the following purposes:</p>
+                    <p class="projects__text">NASA is planning to put the first woman and next man on the Moon by 2024 under the Artemis program. To sustainably explore the Moon, the agency would need to build its habitable bases at the lunar south pole (LSP), where past orbiters’ observations indicated the presence of water ice in permanently dark craters. Unlike Apollo landing sites, which clustered mostly near the equator, no human has ever set foot on LSP. As a result, it is crucial to develop a tool to assess the illumination by the Sun and the communication coverage by Earth ground stations and lunar relay satellites. I have developed the Terrain Coverage Analysis Tool for the following purposes:</p>
                     <ol>
                         <li>Modeling and computing terrain</li>
                         <li>Regional dynamic simulation</li>
@@ -196,68 +163,27 @@
                         <li>Path Transverse Optimization</li>
                     </ol>
                 </div>
-
-                <video width="500" height="440" class='center' style="margin-top: 50px" controls>
-                    <source src="assets/img/2DVIEW.mp4 " type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div style="margin-top: 50px">The demo shows Sun's illumination (red), Earth visibility (blue)
-                    and the intersection regions (pink) on the Lunar's South Pole
-                    (1600 square kilometer, centered at SP) in November 2024 using mock-up data.
-                    The number on each object represents its angular height measured from the horizon.
+                <div>
+                    <video width="100%" height="auto" class='center' style="margin-top: 50px" controls>
+                        <source src="assets/img/2DVIEW.mp4 " type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div style="margin-top: 50px">The demo shows Sun's illumination (red), Earth visibility (blue) and the intersection regions (pink) on the Lunar's South Pole (1600 square kilometer, centered at SP) in November 2024 using mock-up data. The number on each object represents its angular height measured from the horizon.</div>
                 </div>
                 <div class="projects__notes">
                     <h2 class="projects__subtitle" style="margin-top: 50px">COVID-19 Vaccination Modelling</h2>
-                    <p class="projects__text">In this project, I modified Susceptible-Infected-Recovered (SIR)
-                        mathematical model
-                        used on the SARS to get the Susceptible-Vaccinated-Infected-Recovered (SVIR) model.
-                        Then I approximated the parameters to fit the Korea COVID-19 data to implement the SVIR model.
-                        I investigated the model to determine the proportion of the population that is needed to be
-                        vaccinated in order to control the spread of the COVID-19 outbreak.
-                        Before doing modelling and analysis, I expected that the number of infected cases to reduce as
-                        the percentage of vaccination per day increased.
-                        The results that I obtained from implementing my model are very similar to what I predicted.
-                        Increasing the vaccination rate per day from 1% to 7% has a significant impact on the total
-                        infected cases.</p>
+                    <p class="projects__text">In this project, I modified Susceptible-Infected-Recovered (SIR) mathematical model used on the SARS to get the Susceptible-Vaccinated-Infected-Recovered (SVIR) model. Then I approximated the parameters to fit the Korea COVID-19 data to implement the SVIR model. I investigated the model to determine the proportion of the population that is needed to be vaccinated in order to control the spread of the COVID-19 outbreak. Before doing modelling and analysis, I expected that the number of infected cases to reduce as the percentage of vaccination per day increased. The results that I obtained from implementing my model are very similar to what I predicted. Increasing the vaccination rate per day from 1% to 7% has a significant impact on the total infected cases.</p>
                 </div>
-                <br>
                 <div>
                     <img src="assets/img/Vec3vsVec7.jpg" alt="" class="skills__img">
                 </div>
-
+            </div>
         </section>
+        -->
 
         <!--===== RESUME =====-->
-        <!-- <section class="resume section" id="resume">
-            <h2 class="section-title">Transcript</h2>
-
-            <div class="resume__container bd-grid">
-                <div class="home__data">
-                    <a href="assets\downloads\UNOFFICIAL_STUDENT_ACADEMIC_RECORD_FINAL.pdf" class="button"
-                        download="Duy_Nguyen_Transcript.pdf" data-sr-id="3">Download transcript</a>
-                </div>
-            </div>
-
-        </section> -->
-
-        <!--===== CONTACT =====-->
-        <section class="contact section" id="contact">
-            <h2 class="section-title">Contact</h2>
-
-            <div class="contact__container bd-grid">
-                duynguyenms2020@gmail.com
-            </div>
-        </section>
+        <!-- Resume section removed as requested -->
     </main>
-
-    <!--===== FOOTER =====-->
-    <footer class="footer">
-        <p class="footer__title">Duy Nguyen</p>
-        <p> Website updated in <span id="updateDate"></span></p>
-        <p>&#169; <span id="currentYear"></span> copyright all right reserved</p>
-    </footer>
-    
-
 
     <!--===== SCROLL REVEAL =====-->
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -275,26 +201,6 @@
             document.getElementById("myImage").src = src;
         }
     </script>
-
-    <script>
-        // Get the current date
-        const now = new Date();
-
-        // Array of month names
-        const monthNames = ["January", "February", "March", "April", "May", "June",
-                            "July", "August", "September", "October", "November", "December"];
-
-        // Get the current month and year
-        const currentMonth = monthNames[now.getMonth()];
-        const currentYear = now.getFullYear();
-
-        // Update the span with id 'updateDate' for the month and year
-        document.getElementById('updateDate').textContent = `${currentMonth}, ${currentYear}`;
-
-        // Update the span with id 'currentYear' for the copyright year
-        document.getElementById('currentYear').textContent = currentYear;
-    </script>
-
 
 </body>
 

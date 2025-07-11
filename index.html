@@ -248,7 +248,7 @@
                         <div class="list-text">Master's Degree in Software Engineering (2025)</div>
                     </li>
                     <li class="list-item">
-                        <i class="material-icons list-icon">calculate</i>
+                        <i class="material-icons list-icon">school</i>
                         <div class="list-text">Master's Degree in Applied Mathematics (2021)</div>
                     </li>
                 </ul>
@@ -406,7 +406,32 @@
                 // Contact info in smaller font
                 pdf.setFontSize(9);
                 pdf.setFont("helvetica", "normal");
-                pdf.text(`${resumeData.personal_info.email} | ${resumeData.personal_info.linkedin} | ${resumeData.personal_info.github}`, margin, yPosition);
+                
+                // Add email (not clickable, just text)
+                pdf.text(resumeData.personal_info.email, margin, yPosition);
+                let xPosition = margin + pdf.getTextWidth(resumeData.personal_info.email) + pdf.getTextWidth(" | ");
+                
+                // Add LinkedIn link (blue with underline)
+                pdf.setTextColor(0, 0, 255);
+                pdf.textWithLink("LinkedIn", xPosition, yPosition, { url: resumeData.personal_info.linkedin });
+                const linkedinWidth = pdf.getTextWidth("LinkedIn");
+                pdf.setLineWidth(0.3);
+                pdf.line(xPosition, yPosition + 1, xPosition + linkedinWidth, yPosition + 1);
+                
+                xPosition += linkedinWidth + pdf.getTextWidth(" | ");
+                
+                // Add GitHub link (blue with underline)
+                pdf.textWithLink("GitHub", xPosition, yPosition, { url: resumeData.personal_info.github });
+                const githubWidth = pdf.getTextWidth("GitHub");
+                pdf.line(xPosition, yPosition + 1, xPosition + githubWidth, yPosition + 1);
+                
+                // Reset text color to black
+                pdf.setTextColor(0, 0, 0);
+                
+                // Add the separator text
+                pdf.text(" | ", margin + pdf.getTextWidth(resumeData.personal_info.email), yPosition);
+                pdf.text(" | ", margin + pdf.getTextWidth(resumeData.personal_info.email) + pdf.getTextWidth(" | ") + linkedinWidth, yPosition);
+                
                 yPosition += 10;
                 
                 // Education Section
@@ -471,11 +496,23 @@
                     
                     resumeData.certifications.forEach(cert => {
                         pdf.setFontSize(10);
-                        pdf.setFont("helvetica", "bold");
-                        pdf.text(cert.name, margin, yPosition);
-                        
                         pdf.setFont("helvetica", "normal");
-                        pdf.text(cert.duration, pageWidth - margin - pdf.getTextWidth(cert.duration), yPosition);
+                        
+                        // Set text color to blue for links
+                        pdf.setTextColor(0, 0, 255);
+                        
+                        // Add clickable link for certification name
+                        const certText = `${cert.name} (${cert.duration})`;
+                        pdf.textWithLink(certText, margin, yPosition, { url: cert.url });
+                        
+                        // Add underline
+                        const textWidth = pdf.getTextWidth(certText);
+                        pdf.setLineWidth(0.3);
+                        pdf.line(margin, yPosition + 1, margin + textWidth, yPosition + 1);
+                        
+                        // Reset text color to black
+                        pdf.setTextColor(0, 0, 0);
+                        
                         yPosition += 6;
                     });
                 }
@@ -486,7 +523,27 @@
                     
                     pdf.setFont("helvetica", "normal");
                     pdf.setFontSize(9);
-                    yPosition = addText(resumeData.publications.note, margin, yPosition, 9) + 3;
+                    
+                    // Split the note to make the URL clickable
+                    const noteText = resumeData.publications.note;
+                    const beforeUrl = "Work-related journals and technical reports co-authored are available at ";
+                    const url = "www.duyanguyen.com";
+                    
+                    // Add the text before URL
+                    pdf.text(beforeUrl, margin, yPosition);
+                    const beforeUrlWidth = pdf.getTextWidth(beforeUrl);
+                    
+                    // Add the clickable URL (blue with underline)
+                    pdf.setTextColor(0, 0, 255);
+                    pdf.textWithLink(url, margin + beforeUrlWidth, yPosition, { url: `https://${url}` });
+                    const urlWidth = pdf.getTextWidth(url);
+                    pdf.setLineWidth(0.3);
+                    pdf.line(margin + beforeUrlWidth, yPosition + 1, margin + beforeUrlWidth + urlWidth, yPosition + 1);
+                    
+                    // Reset text color to black
+                    pdf.setTextColor(0, 0, 0);
+                    
+                    yPosition += 8;
                 }
                 
                 // Save PDF

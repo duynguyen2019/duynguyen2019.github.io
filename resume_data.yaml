@@ -1,0 +1,69 @@
+personal_info:
+  name: "Duy Nguyen"
+  email: "duynguyenms2020@gmail.com"
+  linkedin: "https://www.linkedin.com/in/duy-nguyen-8155b3b4/"
+  github: "https://github.com/duynguyen2019"
+  website: "https://www.duyanguyen.com/"
+
+education:
+  - institution: "California State University, Fullerton"
+    degree: "M.S. Software Engineering"
+    duration: "Aug 2023 - May 2025"
+    gpa: "4.0"
+    details: "Software Engineering, Machine Learning, Cloud Computing, Web Development"
+  - institution: "California State University, Fullerton"
+    degree: "M.S. Applied Mathematics"
+    duration: "Aug 2019 - Jan 2021"
+    gpa: "3.94"
+    details: "Applied Mathematics, Statistical Analysis, Mathematical Modeling, Data Analysis"
+  - institution: "California State University, Fullerton"
+    degree: "B.S. Mathematics"
+    duration: "Aug 2016 - Aug 2019"
+    gpa: "3.60"
+    details: "Mathematics, Statistics, Calculus, Linear Algebra"
+
+experience:
+  - company: "Southern California Coastal Water Research Authority"
+    position: "Programmer"
+    location: "Costa Mesa, CA"
+    duration: "Jul 2019 - Present"
+    type: "Full-time"
+    responsibilities:
+      - "Developed and maintained interactive dashboard utilizing D3 and viz libraries, providing users with a comprehensive tool for evaluating prompts across various metrics"
+      - "Enhanced system performance and user experience by using Next.js, enabling asynchronous generation of prompts and enhancing system scalability and maintainability"
+      - "Implemented model loading utilizing LoRa, optimizing the efficiency and performance of the application's machine learning components"
+      - "Spearheaded engineering efforts related to AWS Marketplace and SageMaker integration, facilitating seamless deployment and management of machine learning models"
+      - "Streamlined deployment processes using Pulumi, contributing to a more efficient and reliable deployment pipeline, including the development of a full self-serve deployment solution"
+      - "Played a key role in addressing security vulnerabilities (CVEs), reducing their count from 600 to 2 through diligent analysis and proactive mitigation measures"
+      - "Developed agnostic-evaluation framework using foundation open-source models"
+  - company: "California State University, Fullerton"
+    position: "Part-time Lecturer"
+    location: "Fullerton, CA"
+    duration: "Aug 2024 - Present"
+    type: "Part-time"
+    responsibilities:
+      - "Teach undergraduate courses in Mathematics and Computer Science"
+      - "Develop curriculum and course materials for software engineering and applied mathematics"
+      - "Mentor students in research projects and career development"
+      - "Collaborate with faculty on departmental initiatives and student success programs"
+
+  - company: "Naval Air Weapons Station China Lake"
+    position: "Mathematician"
+    location: "China Lake, CA"
+    duration: "Feb 2022 - Jul 2022"
+    type: "Full-time"
+    responsibilities:
+      - "Worked on classified projects for the Department of Navy (details restricted due to NDA)"
+      - "Implemented advanced mathematical models for weapons systems analysis"
+      - "Collaborated with engineering teams on research and development projects"
+      - "Designed and implemented performance optimization algorithms for naval applications"
+
+certifications:
+  - name: "AWS Certified Developer"
+    duration: "Aug 2023 - Aug 2026"
+    url: "https://www.credly.com/badges/ae7ce3bc-8d0a-4be8-87d3-8d0941cb7064/public_url"
+
+publications:
+  note: "Work-related journals and technical reports co-authored are available at www.duyanguyen.com"
+
+summary: "Experienced Software Engineer with dual Master's degrees in Software Engineering and Applied Mathematics. Specialized in machine learning, cloud computing, and full-stack development with 5+ years of professional experience. AWS certified developer with expertise in Python, JavaScript, and scalable web applications."

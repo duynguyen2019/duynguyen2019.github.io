@@ -15,8 +15,7 @@
         body {
             margin: 0;
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #000000 0%, #1976d2 100%);
-            min-height: 100vh;
+            background-color: #f5f5f5;
         }
         
         .container {
@@ -160,34 +159,6 @@
             border-radius: 16px;
             font-size: 0.9rem;
             border: 1px solid #1976d2;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            animation: slideInUp 0.6s ease-out forwards;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        
-        .skill-chip:hover {
-            background-color: #1976d2;
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(25, 118, 210, 0.3);
-        }
-        
-        .skill-chip:nth-child(1) { animation-delay: 0.1s; }
-        .skill-chip:nth-child(2) { animation-delay: 0.2s; }
-        .skill-chip:nth-child(3) { animation-delay: 0.3s; }
-        .skill-chip:nth-child(4) { animation-delay: 0.4s; }
-        .skill-chip:nth-child(5) { animation-delay: 0.5s; }
-        .skill-chip:nth-child(6) { animation-delay: 0.6s; }
-        .skill-chip:nth-child(7) { animation-delay: 0.7s; }
-        .skill-chip:nth-child(8) { animation-delay: 0.8s; }
-        
-        @keyframes slideInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
         
         .mobile-message {
@@ -221,10 +192,9 @@
                 
                 <img src="assets/img/Per_Pic.jpg" alt="Duy Nguyen" class="profile-image">
                 
-                <button class="button" onclick="generateResume()" id="resumeButton">
-                    <i class="material-icons" style="vertical-align: middle; margin-right: 5px; font-size: 18px;">description</i>
+                <a href="assets/downloads/Professional.pdf" class="button" download="Duy_Nguyen_Resume.pdf">
                     Download Resume
-                </button>
+                </a>
                 
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/duy-nguyen-8155b3b4/" target="_blank" class="social-icon" title="LinkedIn">
@@ -241,20 +211,12 @@
 
             <!-- Second Column - Education & Publications -->
             <div class="card">
-                <h2 class="section-title">Education</h2>
+                <h2 class="section-title">Education and Certificate</h2>
                 <ul class="list">
                     <li class="list-item">
                         <i class="material-icons list-icon">school</i>
                         <div class="list-text">Master's Degree in Software Engineering (2025)</div>
                     </li>
-                    <li class="list-item">
-                        <i class="material-icons list-icon">calculate</i>
-                        <div class="list-text">Master's Degree in Applied Mathematics (2021)</div>
-                    </li>
-                </ul>
-                
-                <h2 class="section-title" style="margin-top: 30px;">Certificate</h2>
-                <ul class="list">
                     <li class="list-item">
                         <i class="material-icons list-icon">verified</i>
                         <div class="list-text">
@@ -262,6 +224,10 @@
                                 AWS Certified Developer (2024)
                             </a>
                         </div>
+                    </li>
+                    <li class="list-item">
+                        <i class="material-icons list-icon">calculate</i>
+                        <div class="list-text">Master's Degree in Applied Mathematics (2021)</div>
                     </li>
                 </ul>
                 
@@ -347,168 +313,6 @@
             For more details, please access this webpage via a desktop device.
         </div>
     </div>
-
-    <!-- Libraries for PDF generation and YAML parsing -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
-    
-    <script>
-        async function generateResume() {
-            try {
-                // Update button state
-                const button = document.getElementById('resumeButton');
-                button.innerHTML = '<i class="material-icons" style="vertical-align: middle; margin-right: 5px; font-size: 18px;">hourglass_empty</i>Generating...';
-                button.disabled = true;
-                
-                // Fetch YAML data
-                const response = await fetch('resume_data.yaml');
-                const yamlText = await response.text();
-                const resumeData = jsyaml.load(yamlText);
-                
-                // Generate PDF
-                const { jsPDF } = window.jspdf;
-                const pdf = new jsPDF();
-                
-                // Set up fonts and styles
-                pdf.setFont("helvetica");
-                let yPosition = 20;
-                const pageWidth = pdf.internal.pageSize.width;
-                const pageHeight = pdf.internal.pageSize.height;
-                const margin = 20;
-                const contentWidth = pageWidth - 2 * margin;
-                
-                // Helper function to add text with word wrapping
-                function addText(text, x, y, fontSize = 10, style = 'normal', maxWidth = contentWidth) {
-                    pdf.setFontSize(fontSize);
-                    pdf.setFont("helvetica", style);
-                    const lines = pdf.splitTextToSize(text, maxWidth);
-                    pdf.text(lines, x, y);
-                    return y + (lines.length * fontSize * 0.4);
-                }
-                
-                // Helper function to add section header
-                function addSectionHeader(title, y) {
-                    pdf.setFontSize(12);
-                    pdf.setFont("helvetica", "bold");
-                    pdf.text(title.toUpperCase(), margin, y);
-                    // Add underline
-                    pdf.setLineWidth(0.5);
-                    pdf.line(margin, y + 1, margin + pdf.getTextWidth(title.toUpperCase()), y + 1);
-                    return y + 6;
-                }
-                
-                // Header - Name only
-                pdf.setFontSize(16);
-                pdf.setFont("helvetica", "bold");
-                pdf.text(resumeData.personal_info.name.toUpperCase(), margin, yPosition);
-                yPosition += 10;
-                
-                // Contact info in smaller font
-                pdf.setFontSize(9);
-                pdf.setFont("helvetica", "normal");
-                pdf.text(`${resumeData.personal_info.email} | ${resumeData.personal_info.linkedin} | ${resumeData.personal_info.github}`, margin, yPosition);
-                yPosition += 10;
-                
-                // Education Section
-                yPosition = addSectionHeader("Education", yPosition);
-                
-                resumeData.education.forEach(edu => {
-                    // Degree (bold)
-                    pdf.setFontSize(11);
-                    pdf.setFont("helvetica", "bold");
-                    pdf.text(edu.degree, margin, yPosition);
-                    
-                    // Duration (right aligned)
-                    pdf.setFont("helvetica", "normal");
-                    pdf.text(edu.duration, pageWidth - margin - pdf.getTextWidth(edu.duration), yPosition);
-                    yPosition += 6;
-                    
-                    // Institution name and GPA
-                    pdf.setFontSize(10);
-                    pdf.text(`${edu.institution}${edu.gpa ? `, GPA: ${edu.gpa}` : ''}`, margin, yPosition);
-                    yPosition += 5;
-                    
-                    // Details
-                    pdf.setFontSize(9);
-                    yPosition = addText(edu.details, margin, yPosition, 9) + 2;
-                });
-                
-                yPosition += 3;
-                
-                // Experience Section
-                yPosition = addSectionHeader("Experience", yPosition);
-                
-                resumeData.experience.forEach(job => {
-                    // Position/Job Title (bold)
-                    pdf.setFontSize(11);
-                    pdf.setFont("helvetica", "bold");
-                    pdf.text(job.position, margin, yPosition);
-                    
-                    // Location and type (right aligned)
-                    pdf.setFont("helvetica", "normal");
-                    const locationText = `${job.location} - ${job.type}`;
-                    pdf.text(locationText, pageWidth - margin - pdf.getTextWidth(locationText), yPosition);
-                    yPosition += 6;
-                    
-                    // Company name and duration
-                    pdf.setFontSize(10);
-                    pdf.setFont("helvetica", "italic");
-                    pdf.text(`${job.company} (${job.duration})`, margin, yPosition);
-                    yPosition += 6;
-                    
-                    // Responsibilities
-                    pdf.setFont("helvetica", "normal");
-                    pdf.setFontSize(9);
-                    job.responsibilities.forEach(resp => {
-                        yPosition = addText(`• ${resp}`, margin, yPosition, 9) + 1;
-                    });
-                    yPosition += 3;
-                });
-                
-                // Certifications Section
-                if (resumeData.certifications && resumeData.certifications.length > 0) {
-                    yPosition = addSectionHeader("Certifications", yPosition);
-                    
-                    resumeData.certifications.forEach(cert => {
-                        pdf.setFontSize(10);
-                        pdf.setFont("helvetica", "bold");
-                        pdf.text(cert.name, margin, yPosition);
-                        
-                        pdf.setFont("helvetica", "normal");
-                        pdf.text(cert.duration, pageWidth - margin - pdf.getTextWidth(cert.duration), yPosition);
-                        yPosition += 6;
-                    });
-                }
-                
-                // Publications Section
-                if (resumeData.publications && resumeData.publications.note) {
-                    yPosition = addSectionHeader("Publications", yPosition);
-                    
-                    pdf.setFont("helvetica", "normal");
-                    pdf.setFontSize(9);
-                    yPosition = addText(resumeData.publications.note, margin, yPosition, 9) + 3;
-                }
-                
-                // Save PDF
-                pdf.save('Duy_Nguyen_Resume.pdf');
-                
-                // Reset button
-                button.innerHTML = '<i class="material-icons" style="vertical-align: middle; margin-right: 5px; font-size: 18px;">description</i>Generate Resume';
-                button.disabled = false;
-                
-            } catch (error) {
-                console.error('Error generating resume:', error);
-                alert('Error generating resume. Please try again.');
-                
-                // Reset button
-                const button = document.getElementById('resumeButton');
-                button.innerHTML = '<i class="material-icons" style="vertical-align: middle; margin-right: 5px; font-size: 18px;">description</i>Generate Resume';
-                button.disabled = false;
-            }
-        }
-    </script>
 </body>
-
-</html>
 
 </html>

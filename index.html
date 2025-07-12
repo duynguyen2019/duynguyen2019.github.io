@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     
-    <title>Mathemagician - Duy Nguyen</title>
+    <title>My Portfolio</title>
     
     <style>
         body {
@@ -205,6 +205,65 @@
                 display: block;
             }
         }
+
+        .publication-hidden {
+            display: none;
+        }
+
+        .page-btn {
+            background: #f5f5f5;
+            color: #333;
+            border: 2px solid #ddd;
+            padding: 8px 12px;
+            margin: 0 3px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            min-width: 36px;
+            height: 36px;
+        }
+
+        .page-btn:hover {
+            background: #2196F3;
+            color: white;
+            border-color: #2196F3;
+            transform: translateY(-2px);
+        }
+
+        .page-btn.active {
+            background: linear-gradient(45deg, #2196F3, #1976D2);
+            color: white;
+            border-color: #1976D2;
+            box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);
+        }
+
+        .publications-container {
+            min-height: 320px;
+            position: relative;
+        }
+
+        .publication-pagination-btn {
+            background: linear-gradient(45deg, #2196F3, #1976D2);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            margin: 0 5px;
+        }
+
+        .publication-pagination-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .publication-pagination-btn.show-less {
+            background: linear-gradient(45deg, #757575, #424242);
+        }
     </style>
 </head>
 
@@ -214,10 +273,14 @@
             <!-- First Column - Profile -->
             <div class="card profile-card">
                 <h1 class="title">
-                    Hello,<br>
                     I am <span style="color: #1976d2;">Duy Nguyen</span><br>
                     Programmer
+                    <br>
+                    
                 </h1>
+                <div>
+                    I build something people want.
+                </div>
                 
                 <img src="assets/img/Per_Pic.jpg" alt="Duy Nguyen" class="profile-image">
                 
@@ -266,40 +329,47 @@
                 </ul>
                 
                 <h2 class="section-title" style="margin-top: 30px;">Publications</h2>
-                <ul class="list">
-                    <li class="list-item">
-                        <i class="material-icons list-icon">article</i>
-                        <div class="list-text">
-                            <a href="https://ftp.sccwrp.org/pub/download/DOCUMENTS/JournalArticles/1403_HF183EstimateAnnualLoadingOWTS.pdf" target="_blank">
-                                Using HF183 to Estimate Watershed-Wide Annual Loadings of Human Fecal Pollution from Onsite Wastewater Treatment Systems (2024)
-                            </a>
-                        </div>
-                    </li>
-                    <li class="list-item">
-                        <i class="material-icons list-icon">article</i>
-                        <div class="list-text">
-                            <a href="https://ftp.sccwrp.org/pub/download/DOCUMENTS/TechnicalReports/1391_TurfReplacementBMPs.pdf" target="_blank">
-                                Turf Replacement BMPs to Reduce Dry and Wet Weather Runoff (2024)
-                            </a>
-                        </div>
-                    </li>
-                    <li class="list-item">
-                        <i class="material-icons list-icon">article</i>
-                        <div class="list-text">
-                            <a href="https://ftp.sccwrp.org/pub/download/DOCUMENTS/TechnicalReports/1378_MicroplasticsWastewaterPlants.pdf" target="_blank">
-                                Characterizing the Removal of Microplastics by California Wastewater Treatment Plants: Implications for Management Strategies. (2024)
-                            </a>
-                        </div>
-                    </li>
-                    <li class="list-item">
-                        <i class="material-icons list-icon">article</i>
-                        <div class="list-text">
-                            <a href="https://ftp.sccwrp.org/pub/download/DOCUMENTS/TechnicalReports/1389_MPLosAngelesSanGabrielRivers.pdf" target="_blank">
-                                Wong, C.S., W. Lao, S. Sauers, D. Nguyen, L.M. Thornton Hampton. 2024. Multimedia investigations of microplastic concentrations in the Los Angeles and San Gabriel Rivers. Technical Report 1389. Southern California Coastal Water Research Project. Costa Mesa, CA. (2024)
-                            </a>
-                        </div>
-                    </li>
-                </ul>
+                <div class="publications-container" style="min-height: 320px;">
+                    <ul class="list" id="publicationsList">
+                        <!-- All Publications (will be grouped dynamically) -->
+                        <li class="list-item publication-item">
+                            <i class="material-icons list-icon">article</i>
+                            <div class="list-text">
+                                <a href="https://ftp.sccwrp.org/pub/download/DOCUMENTS/JournalArticles/1403_HF183EstimateAnnualLoadingOWTS.pdf" target="_blank">
+                                    Using HF183 to Estimate Watershed-Wide Annual Loadings of Human Fecal Pollution from Onsite Wastewater Treatment Systems (2024)
+                                </a>
+                            </div>
+                        </li>
+                        <li class="list-item publication-item">
+                            <i class="material-icons list-icon">article</i>
+                            <div class="list-text">
+                                <a href="https://ftp.sccwrp.org/pub/download/DOCUMENTS/TechnicalReports/1391_TurfReplacementBMPs.pdf" target="_blank">
+                                    Turf Replacement BMPs to Reduce Dry and Wet Weather Runoff (2024)
+                                </a>
+                            </div>
+                        </li>
+                        <li class="list-item publication-item">
+                            <i class="material-icons list-icon">article</i>
+                            <div class="list-text">
+                                <a href="https://ftp.sccwrp.org/pub/download/DOCUMENTS/TechnicalReports/1378_MicroplasticsWastewaterPlants.pdf" target="_blank">
+                                    Characterizing the Removal of Microplastics by California Wastewater Treatment Plants: Implications for Management Strategies. (2024)
+                                </a>
+                            </div>
+                        </li>
+                        <li class="list-item publication-item">
+                            <i class="material-icons list-icon">article</i>
+                            <div class="list-text">
+                                <a href="https://ftp.sccwrp.org/pub/download/DOCUMENTS/TechnicalReports/1389_MPLosAngelesSanGabrielRivers.pdf" target="_blank">
+                                    Multimedia investigations of microplastic concentrations in the Los Angeles and San Gabriel Rivers. Technical Report 1389. (2024)
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="pagination-controls" id="paginationControls" style="text-align: center; margin-top: 15px;">
+                    <!-- Page buttons will be generated dynamically -->
+                </div>
             </div>
 
             <!-- Third Column - Work Experience & Skills -->
@@ -386,8 +456,18 @@
                     return y + (lines.length * fontSize * 0.4);
                 }
                 
+                // Helper function to check if we need a new page
+                function checkPageBreak(currentY, requiredSpace = 20) {
+                    if (currentY + requiredSpace > pageHeight - margin) {
+                        pdf.addPage();
+                        return margin + 20; // Return new Y position
+                    }
+                    return currentY;
+                }
+                
                 // Helper function to add section header
                 function addSectionHeader(title, y) {
+                    y = checkPageBreak(y, 15);
                     pdf.setFontSize(12);
                     pdf.setFont("helvetica", "bold");
                     pdf.text(title.toUpperCase(), margin, y);
@@ -438,6 +518,9 @@
                 yPosition = addSectionHeader("Education", yPosition);
                 
                 resumeData.education.forEach(edu => {
+                    // Check if we need a new page for each education entry
+                    yPosition = checkPageBreak(yPosition, 20);
+                    
                     // Degree (bold)
                     pdf.setFontSize(11);
                     pdf.setFont("helvetica", "bold");
@@ -464,6 +547,9 @@
                 yPosition = addSectionHeader("Experience", yPosition);
                 
                 resumeData.experience.forEach(job => {
+                    // Check if we need a new page for each job
+                    yPosition = checkPageBreak(yPosition, 30);
+                    
                     // Position/Job Title (bold)
                     pdf.setFontSize(11);
                     pdf.setFont("helvetica", "bold");
@@ -518,39 +604,86 @@
                 }
                 
                 // Publications Section
-                if (resumeData.publications && resumeData.publications.note) {
+                if (resumeData.publications) {
                     yPosition = addSectionHeader("Publications", yPosition);
                     
                     pdf.setFont("helvetica", "normal");
                     pdf.setFontSize(9);
                     
-                    // Split the note to make the URL clickable
-                    const noteText = resumeData.publications.note;
-                    const beforeUrl = "Work-related journals and technical reports co-authored are available at ";
-                    const url = "www.duyanguyen.com";
+                    // Handle single note format
+                    if (resumeData.publications.note) {
+                        // Display the full note as plain text
+                        yPosition = addText(resumeData.publications.note, margin, yPosition, 9) + 3;
+                    }
                     
-                    // Add the text before URL
-                    pdf.text(beforeUrl, margin, yPosition);
-                    const beforeUrlWidth = pdf.getTextWidth(beforeUrl);
-                    
-                    // Add the clickable URL (blue with underline)
-                    pdf.setTextColor(0, 0, 255);
-                    pdf.textWithLink(url, margin + beforeUrlWidth, yPosition, { url: `https://${url}` });
-                    const urlWidth = pdf.getTextWidth(url);
-                    pdf.setLineWidth(0.3);
-                    pdf.line(margin + beforeUrlWidth, yPosition + 1, margin + beforeUrlWidth + urlWidth, yPosition + 1);
-                    
-                    // Reset text color to black
-                    pdf.setTextColor(0, 0, 0);
-                    
-                    yPosition += 8;
+                    // Handle multiple publications format with pagination
+                    if (resumeData.publications.items && resumeData.publications.items.length > 0) {
+                        const maxPublicationsPerPage = 3; // Limit publications per section
+                        const totalPublications = resumeData.publications.items.length;
+                        const publicationsToShow = Math.min(maxPublicationsPerPage, totalPublications);
+                        
+                        // Show first few publications
+                        for (let i = 0; i < publicationsToShow; i++) {
+                            const pub = resumeData.publications.items[i];
+                            
+                            // Publication title (bold)
+                            pdf.setFontSize(10);
+                            pdf.setFont("helvetica", "bold");
+                            
+                            if (pub.url) {
+                                // Make title clickable and blue with underline
+                                pdf.setTextColor(0, 0, 255);
+                                pdf.textWithLink(pub.title, margin, yPosition, { url: pub.url });
+                                const titleWidth = pdf.getTextWidth(pub.title);
+                                pdf.setLineWidth(0.3);
+                                pdf.line(margin, yPosition + 1, margin + titleWidth, yPosition + 1);
+                                pdf.setTextColor(0, 0, 0);
+                            } else {
+                                pdf.text(pub.title, margin, yPosition);
+                            }
+                            
+                            // Year (right aligned)
+                            if (pub.year) {
+                                pdf.setFont("helvetica", "normal");
+                                pdf.text(pub.year, pageWidth - margin - pdf.getTextWidth(pub.year), yPosition);
+                            }
+                            
+                            yPosition += 6;
+                            
+                            // Authors, journal, etc.
+                            if (pub.authors || pub.journal || pub.conference) {
+                                pdf.setFontSize(9);
+                                pdf.setFont("helvetica", "normal");
+                                let details = [];
+                                if (pub.authors) details.push(pub.authors);
+                                if (pub.journal) details.push(pub.journal);
+                                if (pub.conference) details.push(pub.conference);
+                                
+                                const detailsText = details.join(', ');
+                                yPosition = addText(detailsText, margin, yPosition, 9) + 3;
+                            }
+                            
+                            // Add space between publications
+                            yPosition += 2;
+                        }
+                        
+                        // Add "See more" indicator if there are more publications
+                        if (totalPublications > maxPublicationsPerPage) {
+                            pdf.setFontSize(9);
+                            pdf.setFont("helvetica", "italic");
+                            pdf.setTextColor(100, 100, 100); // Gray color
+                            pdf.text(`... and ${totalPublications - maxPublicationsPerPage} more publications available at www.duyanguyen.com`, margin, yPosition);
+                            pdf.setTextColor(0, 0, 0); // Reset to black
+                            yPosition += 8;
+                        }
+                    }
                 }
                 
                 // Save PDF
                 pdf.save('Duy_Nguyen_Resume.pdf');
                 
                 // Reset button
-                button.innerHTML = '<i class="material-icons" style="vertical-align: middle; margin-right: 5px; font-size: 18px;">description</i>Generate Resume';
+                button.innerHTML = '<i class="material-icons" style="vertical-align: middle; margin-right: 5px; font-size: 18px;">description</i>Download Resume';
                 button.disabled = false;
                 
             } catch (error) {
@@ -559,10 +692,87 @@
                 
                 // Reset button
                 const button = document.getElementById('resumeButton');
-                button.innerHTML = '<i class="material-icons" style="vertical-align: middle; margin-right: 5px; font-size: 18px;">description</i>Generate Resume';
+                button.innerHTML = '<i class="material-icons" style="vertical-align: middle; margin-right: 5px; font-size: 18px;">description</i>Download Resume';
                 button.disabled = false;
             }
         }
+
+        // Publications pagination functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const publicationItems = document.querySelectorAll('.publication-item');
+            const paginationControls = document.getElementById('paginationControls');
+            const itemsPerPage = 3;
+            let currentPage = 1;
+            
+            // Calculate total pages
+            const totalPages = Math.ceil(publicationItems.length / itemsPerPage);
+            
+            // Create page buttons dynamically
+            function createPageButtons() {
+                paginationControls.innerHTML = '';
+                
+                for (let i = 1; i <= totalPages; i++) {
+                    const button = document.createElement('button');
+                    button.className = 'page-btn';
+                    button.setAttribute('data-page', i);
+                    button.textContent = i;
+                    
+                    if (i === currentPage) {
+                        button.classList.add('active');
+                    }
+                    
+                    button.addEventListener('click', function() {
+                        const targetPage = parseInt(this.getAttribute('data-page'));
+                        showPage(targetPage);
+                    });
+                    
+                    paginationControls.appendChild(button);
+                }
+            }
+            
+            // Show specific page
+            function showPage(pageNumber) {
+                currentPage = pageNumber;
+                
+                // Update active button
+                document.querySelectorAll('.page-btn').forEach(btn => btn.classList.remove('active'));
+                document.querySelector(`[data-page="${pageNumber}"]`).classList.add('active');
+                
+                // Hide all publications
+                publicationItems.forEach(item => {
+                    item.style.display = 'none';
+                    item.style.opacity = '0';
+                });
+                
+                // Calculate which publications to show
+                const startIndex = (pageNumber - 1) * itemsPerPage;
+                const endIndex = startIndex + itemsPerPage;
+                
+                // Show publications for current page with animation
+                for (let i = startIndex; i < endIndex && i < publicationItems.length; i++) {
+                    const item = publicationItems[i];
+                    item.style.display = 'flex';
+                    
+                    setTimeout(() => {
+                        item.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, (i - startIndex) * 100);
+                }
+            }
+            
+            // Initialize pagination
+            if (totalPages > 1) {
+                createPageButtons();
+                showPage(1);
+            } else {
+                // If only one page, show all publications
+                publicationItems.forEach(item => {
+                    item.style.display = 'flex';
+                    item.style.opacity = '1';
+                });
+            }
+        });
     </script>
 </body>
 

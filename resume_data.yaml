@@ -29,21 +29,19 @@ experience:
     duration: "Jul 2019 - Present"
     type: "Full-time"
     responsibilities:
-      - "Developed and maintained interactive dashboard utilizing D3 and viz libraries, providing users with a comprehensive tool for evaluating prompts across various metrics"
-      - "Enhanced system performance and user experience by using Next.js, enabling asynchronous generation of prompts and enhancing system scalability and maintainability"
-      - "Implemented model loading utilizing LoRa, optimizing the efficiency and performance of the application's machine learning components"
-      - "Spearheaded engineering efforts related to AWS Marketplace and SageMaker integration, facilitating seamless deployment and management of machine learning models"
-      - "Streamlined deployment processes using Pulumi, contributing to a more efficient and reliable deployment pipeline, including the development of a full self-serve deployment solution"
-      - "Played a key role in addressing security vulnerabilities (CVEs), reducing their count from 600 to 2 through diligent analysis and proactive mitigation measures"
-      - "Developed agnostic-evaluation framework using foundation open-source models"
+      - "Develop and maintain website applications to streamline the quality control data submission process for partner agencies"
+      - "Design, build, and maintain the organization's data management system (cloud databases, servers, etc.)"
+      - "Collaborate with the scientists to apply statistical techniques to derive insight from environmental data"
+      - "Develop interactive dashboards/data tools/web apps to share insights with managers, clients and researchers from Southern California's wastewater treatment, storm-water management, and water-quality regulatory agencies"
+      - "Supervise student interns in the execution of technical tasks to support project objectives"
+      - "Create training datasets, train models and develop AI iterative process for computer vision using YOLO object detection algorithm"
   - company: "California State University, Fullerton"
     position: "Part-time Lecturer"
     location: "Fullerton, CA"
     duration: "Aug 2024 - Present"
     type: "Part-time"
     responsibilities:
-      - "Teach undergraduate courses in Mathematics and Computer Science"
-      - "Develop curriculum and course materials for software engineering and applied mathematics"
+      - "Teach undergraduate courses in Computer Science"
       - "Mentor students in research projects and career development"
       - "Collaborate with faculty on departmental initiatives and student success programs"
 
@@ -64,6 +62,6 @@ certifications:
     url: "https://www.credly.com/badges/ae7ce3bc-8d0a-4be8-87d3-8d0941cb7064/public_url"
 
 publications:
-  note: "Work-related journals and technical reports co-authored are available at  www.duyanguyen.com"
+  note: "Work-related journals and technical reports co-authored are available at www.duyanguyen.com"
 
 summary: "Experienced Software Engineer with dual Master's degrees in Software Engineering and Applied Mathematics. Specialized in machine learning, cloud computing, and full-stack development with 5+ years of professional experience. AWS certified developer with expertise in Python, JavaScript, and scalable web applications."

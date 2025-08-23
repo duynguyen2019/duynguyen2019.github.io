@@ -433,14 +433,14 @@
                         <i class="material-icons list-icon">work</i>
                         <div class="list-text">
                             <div>Programmer</div>
-                            <div class="secondary-text">2019-Present, [Full-time, Southern California Coastal Water Research Agency]</div>
+                            <div class="secondary-text">2019 - Present, [Full-time, Southern California Coastal Water Research Agency]</div>
                         </div>
                     </li>
                     <li class="list-item">
                         <i class="material-icons list-icon">school</i>
                         <div class="list-text">
-                            <div>Part Time Lecturer (Computer Science)</div>
-                            <div class="secondary-text">2025-Present, [Part-time, California State University, Fullerton]</div>
+                            <div>Lecturer</div>
+                            <div class="secondary-text">2025 - Present, [Part-time, California State University, Fullerton]</div>
                         </div>
                     </li>
                     <li class="list-item">
@@ -563,7 +563,38 @@
                 pdf.text(" | ", margin + pdf.getTextWidth(resumeData.personal_info.email) + pdf.getTextWidth(" | ") + linkedinWidth, yPosition);
                 
                 yPosition += 10;
+                                // Experience Section
+                yPosition = addSectionHeader("Experience", yPosition);
                 
+                resumeData.experience.forEach(job => {
+                    // Check if we need a new page for each job
+                    yPosition = checkPageBreak(yPosition, 30);
+                    
+                    // Position/Job Title (bold)
+                    pdf.setFontSize(11);
+                    pdf.setFont("helvetica", "bold");
+                    pdf.text(job.position, margin, yPosition);
+                    
+                    // Location and type (right aligned)
+                    pdf.setFont("helvetica", "normal");
+                    const locationText = `${job.location}`;
+                    pdf.text(locationText, pageWidth - margin - pdf.getTextWidth(locationText), yPosition);
+                    yPosition += 6;
+                    
+                    // Company name and duration
+                    pdf.setFontSize(10);
+                    pdf.setFont("helvetica", "italic");
+                    pdf.text(`${job.company} (${job.duration})`, margin, yPosition);
+                    yPosition += 6;
+                    
+                    // Responsibilities
+                    pdf.setFont("helvetica", "normal");
+                    pdf.setFontSize(9);
+                    job.responsibilities.forEach(resp => {
+                        yPosition = addText(`• ${resp}`, margin, yPosition, 9) + 1;
+                    });
+                    yPosition += 3;
+                });
                 // Education Section
                 yPosition = addSectionHeader("Education", yPosition);
                 
@@ -593,38 +624,7 @@
                 
                 yPosition += 3;
                 
-                // Experience Section
-                yPosition = addSectionHeader("Experience", yPosition);
-                
-                resumeData.experience.forEach(job => {
-                    // Check if we need a new page for each job
-                    yPosition = checkPageBreak(yPosition, 30);
-                    
-                    // Position/Job Title (bold)
-                    pdf.setFontSize(11);
-                    pdf.setFont("helvetica", "bold");
-                    pdf.text(job.position, margin, yPosition);
-                    
-                    // Location and type (right aligned)
-                    pdf.setFont("helvetica", "normal");
-                    const locationText = `${job.location} - ${job.type}`;
-                    pdf.text(locationText, pageWidth - margin - pdf.getTextWidth(locationText), yPosition);
-                    yPosition += 6;
-                    
-                    // Company name and duration
-                    pdf.setFontSize(10);
-                    pdf.setFont("helvetica", "italic");
-                    pdf.text(`${job.company} (${job.duration})`, margin, yPosition);
-                    yPosition += 6;
-                    
-                    // Responsibilities
-                    pdf.setFont("helvetica", "normal");
-                    pdf.setFontSize(9);
-                    job.responsibilities.forEach(resp => {
-                        yPosition = addText(`• ${resp}`, margin, yPosition, 9) + 1;
-                    });
-                    yPosition += 3;
-                });
+
                 
                 // Certifications Section
                 if (resumeData.certifications && resumeData.certifications.length > 0) {

@@ -5,6 +5,39 @@ personal_info:
   github: "https://github.com/duynguyen2019"
   website: "https://www.duyanguyen.com/"
 
+experience:
+  - company: "Southern California Coastal Water Research Agency"
+    position: "Programmer (Full-time)"
+    location: "Jul 2019 - Present"
+    duration: "Costa Mesa, CA"
+    responsibilities:
+      - "Develop and maintain website applications to streamline the quality control data submission process for partner agencies"
+      - "Design, build, and maintain the organization's data management system on AWS (cloud databases, servers, etc.)"
+      - "Collaborate with the scientists to apply statistical techniques to derive insight from environmental data"
+      - "Develop interactive dashboards/data tools/web apps to share insights with managers, clients and researchers from Southern California's wastewater treatment, storm-water management, and water-quality regulatory agencies"
+      - "Supervise student interns in the execution of technical tasks to support project objectives"
+      - "Create training datasets, train models and develop AI iterative process for computer vision using YOLO object detection algorithm"
+  - company: "California State University, Fullerton"
+    position: "Lecturer (Part-time)"
+    location: "August 2025 - Present"
+    duration: "Fullerton, CA"
+    responsibilities:
+      - "Teach undergraduate courses in Computer Science and Software Engineering"
+      - "Develop course materials, assignments, and assessments"
+      - "Provide academic advising and support to students"
+      - "Mentor students in research projects and career development"
+      - "Collaborate with faculty on departmental initiatives and student success programs"
+
+  - company: "Naval Air Weapons Station China Lake"
+    position: "Mathematician (Full-time)"
+    location: "Feb 2022 - Jul 2022"
+    duration: "China Lake, CA"
+    responsibilities:
+      - "Worked on classified projects for the Department of Navy (details restricted due to NDA)"
+      - "Implemented advanced mathematical models for weapons systems analysis"
+      - "Collaborated with engineering teams on research and development projects"
+      - "Designed and implemented performance optimization algorithms for naval applications"
+
 education:
   - institution: "California State University, Fullerton"
     degree: "Master of Science in Software Engineering"
@@ -21,40 +54,6 @@ education:
     duration: "Aug 2016 - Aug 2019"
     gpa: "3.60"
     details: "Mathematics, Statistics, Calculus, Linear Algebra"
-
-experience:
-  - company: "Southern California Coastal Water Research Authority"
-    position: "Programmer"
-    location: "Costa Mesa, CA"
-    duration: "Jul 2019 - Present"
-    type: "Full-time"
-    responsibilities:
-      - "Develop and maintain website applications to streamline the quality control data submission process for partner agencies"
-      - "Design, build, and maintain the organization's data management system (cloud databases, servers, etc.)"
-      - "Collaborate with the scientists to apply statistical techniques to derive insight from environmental data"
-      - "Develop interactive dashboards/data tools/web apps to share insights with managers, clients and researchers from Southern California's wastewater treatment, storm-water management, and water-quality regulatory agencies"
-      - "Supervise student interns in the execution of technical tasks to support project objectives"
-      - "Create training datasets, train models and develop AI iterative process for computer vision using YOLO object detection algorithm"
-  - company: "California State University, Fullerton"
-    position: "Teaching Associate"
-    location: "Fullerton, CA"
-    duration: "Jan 2025 - May 2025"
-    type: "Part-time"
-    responsibilities:
-      - "Teach a undergraduate course in Computer Science"
-      - "Mentor students in research projects and career development"
-      - "Collaborate with faculty on departmental initiatives and student success programs"
-
-  - company: "Naval Air Weapons Station China Lake"
-    position: "Mathematician"
-    location: "China Lake, CA"
-    duration: "Feb 2022 - Jul 2022"
-    type: "Full-time"
-    responsibilities:
-      - "Worked on classified projects for the Department of Navy (details restricted due to NDA)"
-      - "Implemented advanced mathematical models for weapons systems analysis"
-      - "Collaborated with engineering teams on research and development projects"
-      - "Designed and implemented performance optimization algorithms for naval applications"
 
 certifications:
   - name: "AWS Certified Developer"

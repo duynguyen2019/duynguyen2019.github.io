@@ -563,7 +563,17 @@
                 pdf.text(" | ", margin + pdf.getTextWidth(resumeData.personal_info.email) + pdf.getTextWidth(" | ") + linkedinWidth, yPosition);
                 
                 yPosition += 10;
-                                // Experience Section
+                
+                // Summary/Overview Section
+                if (resumeData.summary) {
+                    yPosition = addSectionHeader("Professional Overview", yPosition);
+                    pdf.setFontSize(10);
+                    pdf.setFont("helvetica", "normal");
+                    yPosition = addText(resumeData.summary, margin, yPosition, 10) + 3;
+                    yPosition += 2;
+                }
+                
+                // Experience Section
                 yPosition = addSectionHeader("Experience", yPosition);
                 
                 resumeData.experience.forEach(job => {
@@ -617,9 +627,11 @@
                     pdf.text(`${edu.institution}${edu.gpa ? `, GPA: ${edu.gpa}` : ''}`, margin, yPosition);
                     yPosition += 5;
                     
-                    // Details
-                    pdf.setFontSize(9);
-                    yPosition = addText(edu.details, margin, yPosition, 9) + 2;
+                    // Details (if available)
+                    if (edu.details) {
+                        pdf.setFontSize(9);
+                        yPosition = addText(edu.details, margin, yPosition, 9) + 2;
+                    }
                 });
                 
                 yPosition += 3;
@@ -651,6 +663,9 @@
                         
                         yPosition += 6;
                     });
+                    
+                    // Add spacing after certifications section
+                    yPosition += 5;
                 }
                 
                 // Publications Section

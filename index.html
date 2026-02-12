@@ -389,32 +389,41 @@
                             <i class="material-icons list-icon">article</i>
                             <div class="list-text">
                                 <a href="https://ftp.sccwrp.org/pub/download/DOCUMENTS/JournalArticles/1403_HF183EstimateAnnualLoadingOWTS.pdf" target="_blank">
-                                    Using HF183 to Estimate Watershed-Wide Annual Loadings of Human Fecal Pollution from Onsite Wastewater Treatment Systems (2024)
+                                    Using HF183 to Estimate Watershed-Wide Annual Loadings of Human Fecal Pollution from Onsite Wastewater Treatment Systems
                                 </a>
+                                <div class="secondary-text">Schiff, K.C., A. Zimmer-Faust, D. Nguyen, et al. (2024), Sustainability 16:9503</div>
+                            </div>
+                        </li>
+                        <li class="list-item publication-item">
+                            <i class="material-icons list-icon">article</i>
+                            <div class="list-text">
+                                <div>Field Monitoring of Microplastics Loading and Accumulation in Biofiltration Best Management Practices</div>
+                                <div class="secondary-text">Fassman-Beck, E., D. Xin, S. Sauers, D. Nguyen, et al. (2026), Technical Report 1457, SCCWRP</div>
+                            </div>
+                        </li>
+                        <li class="list-item publication-item">
+                            <i class="material-icons list-icon">article</i>
+                            <div class="list-text">
+                                <div>Multimedia Investigations of Microplastic Concentrations in the Los Angeles and San Gabriel Rivers</div>
+                                <div class="secondary-text">Wong, C.S., W. Lao, S. Sauers, D. Nguyen, et al. (2024), Technical Report 1389, SCCWRP</div>
                             </div>
                         </li>
                         <li class="list-item publication-item">
                             <i class="material-icons list-icon">article</i>
                             <div class="list-text">
                                 <a href="https://ftp.sccwrp.org/pub/download/DOCUMENTS/TechnicalReports/1391_TurfReplacementBMPs.pdf" target="_blank">
-                                    Turf Replacement BMPs to Reduce Dry and Wet Weather Runoff (2024)
+                                    Turf Replacement BMPs to Reduce Dry and Wet Weather Runoff
                                 </a>
+                                <div class="secondary-text">Fassman-Beck, E., E. Tiernan, D. Nguyen, et al. (2024), Technical Report 1391, SCCWRP</div>
                             </div>
                         </li>
                         <li class="list-item publication-item">
                             <i class="material-icons list-icon">article</i>
                             <div class="list-text">
                                 <a href="https://ftp.sccwrp.org/pub/download/DOCUMENTS/TechnicalReports/1378_MicroplasticsWastewaterPlants.pdf" target="_blank">
-                                    Characterizing the Removal of Microplastics by California Wastewater Treatment Plants: Implications for Management Strategies. (2024)
+                                    Characterizing the Removal of Microplastics by California Wastewater Treatment Plants
                                 </a>
-                            </div>
-                        </li>
-                        <li class="list-item publication-item">
-                            <i class="material-icons list-icon">article</i>
-                            <div class="list-text">
-                                <a href="https://ftp.sccwrp.org/pub/download/DOCUMENTS/TechnicalReports/1389_MPLosAngelesSanGabrielRivers.pdf" target="_blank">
-                                    Multimedia investigations of microplastic concentrations in the Los Angeles and San Gabriel Rivers. Technical Report 1389. (2024)
-                                </a>
+                                <div class="secondary-text">Wong, C.S., W. Lao, S. Sauers, D. Nguyen, et al. (2024), Technical Report 1378, SCCWRP</div>
                             </div>
                         </li>
                     </ul>
@@ -683,7 +692,7 @@
                     
                     // Handle multiple publications format with pagination
                     if (resumeData.publications.items && resumeData.publications.items.length > 0) {
-                        const maxPublicationsPerPage = 3; // Limit publications per section
+                        const maxPublicationsPerPage = 5; // Limit publications per section
                         const totalPublications = resumeData.publications.items.length;
                         const publicationsToShow = Math.min(maxPublicationsPerPage, totalPublications);
                         
@@ -691,41 +700,40 @@
                         for (let i = 0; i < publicationsToShow; i++) {
                             const pub = resumeData.publications.items[i];
                             
-                            // Publication title (bold)
+                            yPosition = checkPageBreak(yPosition, 25);
+                            
+                            // Publication title (bold) with word wrapping
                             pdf.setFontSize(10);
                             pdf.setFont("helvetica", "bold");
                             
-                            if (pub.url) {
-                                // Make title clickable and blue with underline
-                                pdf.setTextColor(0, 0, 255);
-                                pdf.textWithLink(pub.title, margin, yPosition, { url: pub.url });
-                                const titleWidth = pdf.getTextWidth(pub.title);
-                                pdf.setLineWidth(0.3);
-                                pdf.line(margin, yPosition + 1, margin + titleWidth, yPosition + 1);
-                                pdf.setTextColor(0, 0, 0);
-                            } else {
-                                pdf.text(pub.title, margin, yPosition);
-                            }
+                            // Calculate max width for title (leave space for year on right)
+                            const yearSpace = pub.year ? pdf.getTextWidth(pub.year) + 10 : 0;
+                            const titleMaxWidth = contentWidth - yearSpace;
                             
-                            // Year (right aligned)
+                            // Use splitTextToSize for proper wrapping
+                            const titleLines = pdf.splitTextToSize(pub.title, titleMaxWidth);
+                            pdf.text(titleLines, margin, yPosition);
+                            
+                            // Year (right aligned, on first line of title)
                             if (pub.year) {
                                 pdf.setFont("helvetica", "normal");
                                 pdf.text(pub.year, pageWidth - margin - pdf.getTextWidth(pub.year), yPosition);
                             }
                             
-                            yPosition += 6;
+                            yPosition += titleLines.length * 4 + 2;
                             
-                            // Authors, journal, etc.
-                            if (pub.authors || pub.journal || pub.conference) {
-                                pdf.setFontSize(9);
+                            // Authors and journal on separate lines
+                            pdf.setFontSize(9);
+                            pdf.setFont("helvetica", "italic");
+                            
+                            if (pub.authors) {
+                                yPosition = addText(pub.authors, margin, yPosition, 9) + 1;
+                            }
+                            
+                            if (pub.journal || pub.type) {
                                 pdf.setFont("helvetica", "normal");
-                                let details = [];
-                                if (pub.authors) details.push(pub.authors);
-                                if (pub.journal) details.push(pub.journal);
-                                if (pub.conference) details.push(pub.conference);
-                                
-                                const detailsText = details.join(', ');
-                                yPosition = addText(detailsText, margin, yPosition, 9) + 3;
+                                const pubInfo = pub.journal || pub.type;
+                                yPosition = addText(pubInfo, margin, yPosition, 9) + 1;
                             }
                             
                             // Add space between publications

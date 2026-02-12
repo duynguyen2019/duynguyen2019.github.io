@@ -13,28 +13,26 @@ experience:
     responsibilities:
       - "Reduced substantially data submission errors and processing time through development of automated quality control web applications serving 20+ partner agencies"
       - "Architected and deployed enterprise-grade AWS cloud infrastructure, improving system reliability to over 90% uptime and reducing operational costs by 50%"
-      - "Delivered actionable environmental insights through advanced statistical analysis, enabling data-driven decisions that influenced $5M+ in regional water quality initiatives"
-      - "Empowered stakeholders across wastewater treatment and water-quality regulatory agencies with interactive dashboards and web tools, increasing data accessibility and reducing report generation time by 75%"
+      - "Delivered actionable environmental insights through advanced statistical analysis, enabling data-driven decisions that influenced multi-millions in regional water quality initiatives"
+      - "Empowered stakeholders across wastewater treatment and water-quality regulatory agencies with interactive dashboards and web tools, increasing data accessibility and reducing report generation time substantially"
       - "Mentored and guided 10+ student interns in technical skill development, resulting in 10+ successful project deliveries and many career placements in tech industry"
-      - "Pioneered automated object detection proof-of-concept achieving 92% accuracy with custom-trained YOLO models, demonstrating 10x faster image analysis that secured stakeholder buy-in and initiated expansion into enterprise-scale AI monitoring systems"
+      - "Pioneered automated object detection proof-of-concept achieving 95% accuracy with custom-trained YOLO models, demonstrating 10x faster image analysis that secured stakeholder buy-in and initiated expansion into enterprise-scale AI monitoring systems"
   - company: "California State University, Fullerton"
     position: "Lecturer (Part-time)"
     location: "August 2025 - Present"
     duration: "Fullerton, CA"
     responsibilities:
-      - "Delivered high-quality instruction in Computer Science and Software Engineering to 100+ undergraduate students, achieving 4.5/5.0 average student satisfaction rating"
+      - "Delivered high-quality instruction in Computer Science and Software Engineering to 100+ undergraduate students, achieving high student satisfaction rating"
       - "Created comprehensive curriculum materials and practical assessments that improved student coding proficiency and project completion rates"
-      - "Guided 10+ students through academic planning and career pathways, resulting in improved retention rates and successful internship placements"
+      - "Guided 10+ students through academic planning and career pathways"
 
-  - company: "Naval Air Weapons Station China Lake"
-    position: "Mathematician (Full-time)"
+  - company: "Department of Navy - Naval Air Weapons Station China Lake"
+    position: "Mathematician (Full-time) - obtained Final Secret Clearance"
     location: "Feb 2022 - Jul 2022"
     duration: "China Lake, CA"
     responsibilities:
-      - "Delivered critical mathematical solutions for classified Department of Navy projects, meeting all security requirements and project deadlines (details restricted due to NDA)"
-      - "Enhanced weapons systems analysis accuracy through development and implementation of sophisticated mathematical models and simulation frameworks"
-      - "Accelerated R&D project timelines through effective cross-functional collaboration with engineering teams, resulting in faster prototype development"
-      - "Optimized naval application performance through innovative algorithm design, improving system efficiency and reducing computational costs"
+      - "Delivered advanced mathematical solutions for classified weapons systems including radar systems for fighters and helicopters (details restricted due to Classified status)"
+      - "Developed sophisticated simulation frameworks and optimized algorithms for naval applications (details restricted due to Classified status)"
 
 education:
   - institution: "California State University, Fullerton"
@@ -56,6 +54,40 @@ certifications:
     url: "https://www.credly.com/badges/ae7ce3bc-8d0a-4be8-87d3-8d0941cb7064/public_url"
 
 publications:
-  note: "Work-related journals and technical reports co-authored are available at www.duyanguyen.com"
+  items:
+    - title: "Using HF183 to Estimate Watershed-Wide Annual Loadings of Human Fecal Pollution from Onsite Wastewater Treatment Systems"
+      authors: "Schiff, K.C., A. Zimmer-Faust, D. Nguyen, J.F. Griffith, J.A. Steele, D.E. McCargar, S. Wallace"
+      year: "2024"
+      type: "Journal Article"
+      journal: "Sustainability 16:9503"
+      url: "https://ftp.sccwrp.org/pub/download/DOCUMENTS/JournalArticles/1403_HF183EstimateAnnualLoadingOWTS.pdf"
+    
+    - title: "Field Monitoring of Microplastics Loading and Accumulation in Biofiltration Best Management Practices"
+      authors: "Fassman-Beck, E., D. Xin, S. Sauers, D. Nguyen, J. Gray"
+      year: "2026"
+      type: "Technical Report"
+      journal: "Technical Report 1457. Southern California Coastal Water Research Project. Costa Mesa, CA"
+      url: ""
+    
+    - title: "Multimedia investigations of microplastic concentrations in the Los Angeles and San Gabriel Rivers"
+      authors: "Wong, C.S., W. Lao, S. Sauers, D. Nguyen, L.M. Thornton Hampton"
+      year: "2024"
+      type: "Technical Report"
+      journal: "Technical Report 1389. Southern California Coastal Water Research Project. Costa Mesa, CA"
+      url: ""
+    
+    - title: "Turf Replacement BMPs to Reduce Dry and Wet Weather Runoff"
+      authors: "Fassman-Beck, E., E. Tiernan, D. Nguyen, R. Butler"
+      year: "2024"
+      type: "Technical Report"
+      journal: "Technical Report 1391. Southern California Coastal Water Research Project. Costa Mesa, CA"
+      url: "https://ftp.sccwrp.org/pub/download/DOCUMENTS/TechnicalReports/1391_TurfReplacementBMPs.pdf"
+    
+    - title: "Characterizing the Removal of Microplastics by California Wastewater Treatment Plants: Implications for Management Strategies"
+      authors: "Wong, C.S., W. Lao, S. Sauers, D. Nguyen, R. Butler, D. Lin"
+      year: "2024"
+      type: "Technical Report"
+      journal: "Technical Report 1378. Southern California Coastal Water Research Project. Costa Mesa, CA"
+      url: "https://ftp.sccwrp.org/pub/download/DOCUMENTS/TechnicalReports/1378_MicroplasticsWastewaterPlants.pdf"
 
-summary: "Experienced Programmer with dual Master's degrees in Software Engineering and Applied Mathematics. 5+ years of experience in project management, advanced analytics, and cloud architecture. Specialized in machine learning, cloud computing, and full-stack development. AWS certified developer with expertise in scalable web applications."
+summary: "Experienced Programmer with dual Master's degrees in Software Engineering and Applied Mathematics. 5+ years of experience leading technical initiatives, transforming complex data into strategic insights, and architecting enterprise cloud solutions. Specialized in AI and machine learning, cloud computing, and full-stack development. Obtained final Secret Clearance for classified Department of Navy projects."
